@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@using MODELS
+@model HomeViewModel
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+<script src="~/Scripts/Sistema/home.js"></script>
+
+
+<section class="content-header">
+    <h1>
+        Dashboard
+        <small>Painel Contas</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+    </ol>
+</section>
+
+<section class="content">
+
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <form role="form" id="frmHome">
+                <div class="row">
+
+                    <div class="col-md-6    ">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Empresa/Filial</label>
+                            <select class="form-control" style="width: 100%;" name="MatrizFilial" id="MatrizFilial" onchange="detalhar(); return false;">
+                                <option value="0" selected>Empresa/Filial</option>
+                                @foreach (var item in Model.Clientes)
+                                {
+                                    <option value="@item.Codigo">@item.Nome</option>
+                                }
+                            </select>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Ano</label>
+                            <select class="form-control" style="width: 100%;" name="BuscaAno" id="BuscaAno" onchange="detalhar(); return false;">
+                                <option value="0" selected>Ano...</option>
+                                @foreach (var item in Model.Ano)
+                                {
+                                    <option value="@item.Codigo">@item.Nome</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Mês</label>
+                            <select class="form-control" style="width: 100%;" name="BuscaMes" id="BuscaMes" onchange="detalhar(); return false;">
+                                <option value="0" selected>Mês...</option>
+                                @foreach (var item in Model.Meses)
+                                {
+                                    <option value="@item.Codigo">@item.Nome</option>
+                                }
+
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+
+            <div id="gdrContas"></div>
+
+        </div>
+
+
+    </div>
+
+</section>

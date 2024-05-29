@@ -1,0 +1,383 @@
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\ApplicationInsights.config
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\csc.exe
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\System.Collections.Immutable.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\System.Reflection.Metadata.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\vbc.exe
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\VBCSCompiler.exe
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\roslyn\VBCSCompiler.exe.config
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Aplicacao.dll.config
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Aplicacao.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Aplicacao.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Antlr3.Runtime.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\BEAN.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\BLL.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\EntityFramework.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\EntityFramework.SqlServer.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AI.DependencyCollector.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AI.Web.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AI.WindowsServer.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.ApplicationInsights.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.Google.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.ReportViewer.Common.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Web.Infrastructure.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Newtonsoft.Json.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Owin.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.Helpers.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.Mvc.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.Optimization.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.Razor.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.WebPages.Deployment.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.WebPages.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.WebPages.Razor.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\VIEWMODEL.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\WebGrease.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\DAO.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\MySql.Data.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Dapper.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\BEAN.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\BLL.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\VIEWMODEL.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AI.DependencyCollector.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AI.Web.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AI.WindowsServer.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.ApplicationInsights.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.ReportViewer.WinForms.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.Helpers.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.Mvc.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.Optimization.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.Razor.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.WebPages.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.WebPages.Deployment.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\System.Web.WebPages.Razor.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Antlr3.Runtime.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Newtonsoft.Json.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\EntityFramework.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\EntityFramework.SqlServer.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.Google.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\DAO.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\bin\Dapper.xml
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\obj\Release\Aplicacao.csprojResolveAssemblyReference.cache
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\obj\Release\Aplicacao.dll
+C:\Docs\Anderson\Sistemas\SisEaj\Aplicacao\obj\Release\Aplicacao.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\ApplicationInsights.config
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\csc.exe
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\System.Collections.Immutable.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\System.Reflection.Metadata.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\vbc.exe
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\VBCSCompiler.exe
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\roslyn\VBCSCompiler.exe.config
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Aplicacao.dll.config
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Aplicacao.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Aplicacao.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Antlr3.Runtime.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\BEAN.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\BLL.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\EntityFramework.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\EntityFramework.SqlServer.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AI.DependencyCollector.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AI.Web.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AI.WindowsServer.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.ApplicationInsights.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Google.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Newtonsoft.Json.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Owin.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.Helpers.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.Mvc.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.Optimization.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.Razor.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.WebPages.Deployment.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.WebPages.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.WebPages.Razor.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\VIEWMODEL.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\WebGrease.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\DAO.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\MySql.Data.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Dapper.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\BEAN.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\BLL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\VIEWMODEL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AI.DependencyCollector.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AI.Web.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AI.WindowsServer.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.ApplicationInsights.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.Helpers.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.Mvc.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.Optimization.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.Razor.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.WebPages.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.WebPages.Deployment.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\System.Web.WebPages.Razor.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Antlr3.Runtime.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Newtonsoft.Json.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\EntityFramework.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\EntityFramework.SqlServer.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Google.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\DAO.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\bin\Dapper.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\obj\Release\Aplicacao.csproj.AssemblyReference.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\obj\Release\Aplicacao.csproj.CoreCompileInputs.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\obj\Release\Aplicacao.csproj.Up2Date
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\obj\Release\Aplicacao.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\Aplicacao\obj\Release\Aplicacao.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\ApplicationInsights.config
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\csc.exe
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\System.Collections.Immutable.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\System.Reflection.Metadata.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\vbc.exe
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\VBCSCompiler.exe
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\roslyn\VBCSCompiler.exe.config
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Aplicacao.dll.config
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Aplicacao.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Aplicacao.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Antlr3.Runtime.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\BEAN.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\BLL.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\EntityFramework.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\EntityFramework.SqlServer.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AI.Agent.Intercept.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AI.DependencyCollector.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AI.Web.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AI.WindowsServer.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.ApplicationInsights.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.Core.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Cookies.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Facebook.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Google.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.OAuth.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Twitter.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.ReportViewer.Common.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.ReportViewer.WinForms.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Web.Infrastructure.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Newtonsoft.Json.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Owin.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.Helpers.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.Mvc.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.Optimization.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.Razor.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.WebPages.Deployment.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.WebPages.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.WebPages.Razor.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\VIEWMODEL.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\WebGrease.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\DAO.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\MySql.Data.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Dapper.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\BEAN.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\BLL.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\VIEWMODEL.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\EntityFramework.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\EntityFramework.SqlServer.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AI.DependencyCollector.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AI.Web.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AI.WindowsServer.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.ApplicationInsights.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.Helpers.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.Mvc.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.Optimization.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.Razor.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.WebPages.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.WebPages.Deployment.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\System.Web.WebPages.Razor.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Antlr3.Runtime.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Newtonsoft.Json.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.Core.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Facebook.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Cookies.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.OAuth.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Google.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.Twitter.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\DAO.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\bin\Dapper.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\obj\Release\Aplicacao.csprojResolveAssemblyReference.cache
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\obj\Release\RdlCompile.cache
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\obj\Release\RdlCompile.compiled
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\obj\Release\Aplicacao.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\Aplicacao\obj\Release\Aplicacao.pdb
+D:\SisCarloTete2\Aplicacao\bin\ApplicationInsights.config
+D:\SisCarloTete2\Aplicacao\bin\roslyn\csc.exe
+D:\SisCarloTete2\Aplicacao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\SisCarloTete2\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\SisCarloTete2\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\SisCarloTete2\Aplicacao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\SisCarloTete2\Aplicacao\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\SisCarloTete2\Aplicacao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\SisCarloTete2\Aplicacao\bin\roslyn\System.Collections.Immutable.dll
+D:\SisCarloTete2\Aplicacao\bin\roslyn\System.Reflection.Metadata.dll
+D:\SisCarloTete2\Aplicacao\bin\roslyn\vbc.exe
+D:\SisCarloTete2\Aplicacao\bin\roslyn\VBCSCompiler.exe
+D:\SisCarloTete2\Aplicacao\bin\roslyn\VBCSCompiler.exe.config
+D:\SisCarloTete2\Aplicacao\bin\Aplicacao.dll.config
+D:\SisCarloTete2\Aplicacao\bin\Aplicacao.dll
+D:\SisCarloTete2\Aplicacao\bin\Aplicacao.pdb
+D:\SisCarloTete2\Aplicacao\bin\Antlr3.Runtime.dll
+D:\SisCarloTete2\Aplicacao\bin\BEAN.dll
+D:\SisCarloTete2\Aplicacao\bin\BLL.dll
+D:\SisCarloTete2\Aplicacao\bin\EntityFramework.dll
+D:\SisCarloTete2\Aplicacao\bin\EntityFramework.SqlServer.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AI.Agent.Intercept.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AI.DependencyCollector.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AI.Web.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AI.WindowsServer.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.ApplicationInsights.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AspNet.Identity.Core.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.Cookies.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.Facebook.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.Google.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.OAuth.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.Twitter.dll
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Web.Infrastructure.dll
+D:\SisCarloTete2\Aplicacao\bin\Newtonsoft.Json.dll
+D:\SisCarloTete2\Aplicacao\bin\Owin.dll
+D:\SisCarloTete2\Aplicacao\bin\System.Web.Helpers.dll
+D:\SisCarloTete2\Aplicacao\bin\System.Web.Mvc.dll
+D:\SisCarloTete2\Aplicacao\bin\System.Web.Optimization.dll
+D:\SisCarloTete2\Aplicacao\bin\System.Web.Razor.dll
+D:\SisCarloTete2\Aplicacao\bin\System.Web.WebPages.Deployment.dll
+D:\SisCarloTete2\Aplicacao\bin\System.Web.WebPages.dll
+D:\SisCarloTete2\Aplicacao\bin\System.Web.WebPages.Razor.dll
+D:\SisCarloTete2\Aplicacao\bin\VIEWMODEL.dll
+D:\SisCarloTete2\Aplicacao\bin\WebGrease.dll
+D:\SisCarloTete2\Aplicacao\bin\DAO.dll
+D:\SisCarloTete2\Aplicacao\bin\MySql.Data.dll
+D:\SisCarloTete2\Aplicacao\bin\Dapper.dll
+D:\SisCarloTete2\Aplicacao\bin\BEAN.pdb
+D:\SisCarloTete2\Aplicacao\bin\BLL.pdb
+D:\SisCarloTete2\Aplicacao\bin\VIEWMODEL.pdb
+D:\SisCarloTete2\Aplicacao\bin\EntityFramework.xml
+D:\SisCarloTete2\Aplicacao\bin\EntityFramework.SqlServer.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AI.DependencyCollector.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AI.Web.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AI.WindowsServer.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.ApplicationInsights.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\SisCarloTete2\Aplicacao\bin\System.Web.Helpers.xml
+D:\SisCarloTete2\Aplicacao\bin\System.Web.Mvc.xml
+D:\SisCarloTete2\Aplicacao\bin\System.Web.Optimization.xml
+D:\SisCarloTete2\Aplicacao\bin\System.Web.Razor.xml
+D:\SisCarloTete2\Aplicacao\bin\System.Web.WebPages.xml
+D:\SisCarloTete2\Aplicacao\bin\System.Web.WebPages.Deployment.xml
+D:\SisCarloTete2\Aplicacao\bin\System.Web.WebPages.Razor.xml
+D:\SisCarloTete2\Aplicacao\bin\Antlr3.Runtime.pdb
+D:\SisCarloTete2\Aplicacao\bin\Newtonsoft.Json.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AspNet.Identity.Core.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.Facebook.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.Cookies.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.OAuth.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.Google.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.Twitter.xml
+D:\SisCarloTete2\Aplicacao\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\SisCarloTete2\Aplicacao\bin\DAO.pdb
+D:\SisCarloTete2\Aplicacao\bin\Dapper.xml
+D:\SisCarloTete2\Aplicacao\obj\Release\Aplicacao.csproj.AssemblyReference.cache
+D:\SisCarloTete2\Aplicacao\obj\Release\Aplicacao.csproj.CoreCompileInputs.cache
+D:\SisCarloTete2\Aplicacao\obj\Release\Aplicacao.csproj.Up2Date
+D:\SisCarloTete2\Aplicacao\obj\Release\Aplicacao.dll
+D:\SisCarloTete2\Aplicacao\obj\Release\Aplicacao.pdb

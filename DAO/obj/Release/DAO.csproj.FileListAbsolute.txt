@@ -1,0 +1,52 @@
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\bin\Release\DAO.dll
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\bin\Release\DAO.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\bin\Release\BEAN.dll
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\bin\Release\Dapper.dll
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\bin\Release\MySql.Data.dll
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\bin\Release\VIEWMODEL.dll
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\bin\Release\BEAN.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\bin\Release\VIEWMODEL.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\bin\Release\Dapper.xml
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\obj\Release\DAO.csprojResolveAssemblyReference.cache
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\obj\Release\DAO.dll
+C:\Docs\Anderson\Sistemas\SisEaj\DAO\obj\Release\DAO.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\bin\Release\DAO.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\bin\Release\DAO.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\bin\Release\BEAN.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\bin\Release\Dapper.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\bin\Release\MySql.Data.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\bin\Release\VIEWMODEL.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\bin\Release\BEAN.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\bin\Release\VIEWMODEL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\bin\Release\Dapper.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\obj\Release\DAO.csproj.AssemblyReference.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\obj\Release\DAO.csproj.CoreCompileInputs.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\obj\Release\DAO.csproj.Up2Date
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\obj\Release\DAO.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\DAO\obj\Release\DAO.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\bin\Release\DAO.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\bin\Release\DAO.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\bin\Release\BEAN.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\bin\Release\Dapper.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\bin\Release\MySql.Data.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\bin\Release\VIEWMODEL.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\bin\Release\BEAN.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\bin\Release\VIEWMODEL.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\bin\Release\Dapper.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\obj\Release\DAO.csprojResolveAssemblyReference.cache
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\obj\Release\DAO.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\DAO\obj\Release\DAO.pdb
+D:\SisCarloTete2\DAO\bin\Release\DAO.dll
+D:\SisCarloTete2\DAO\bin\Release\DAO.pdb
+D:\SisCarloTete2\DAO\bin\Release\BEAN.dll
+D:\SisCarloTete2\DAO\bin\Release\Dapper.dll
+D:\SisCarloTete2\DAO\bin\Release\MySql.Data.dll
+D:\SisCarloTete2\DAO\bin\Release\VIEWMODEL.dll
+D:\SisCarloTete2\DAO\bin\Release\BEAN.pdb
+D:\SisCarloTete2\DAO\bin\Release\VIEWMODEL.pdb
+D:\SisCarloTete2\DAO\bin\Release\Dapper.xml
+D:\SisCarloTete2\DAO\obj\Release\DAO.csproj.AssemblyReference.cache
+D:\SisCarloTete2\DAO\obj\Release\DAO.csproj.CoreCompileInputs.cache
+D:\SisCarloTete2\DAO\obj\Release\DAO.csproj.Up2Date
+D:\SisCarloTete2\DAO\obj\Release\DAO.dll
+D:\SisCarloTete2\DAO\obj\Release\DAO.pdb

@@ -1,0 +1,41 @@
+﻿<div class="box-header with-border">
+    <h3 class="box-title">Resultado da Busca</h3>
+</div>
+
+<div class="box-body">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th style="width: 10px">#</th>
+                <th>Nome</th>
+                <th>Email</th>
+
+            </tr>
+
+            @if (Model != null && Model.Pessoa != null)
+            {
+                foreach (var item in Model.Pessoa)
+                {
+                    <tr class="cpointer" id="@("tr" + item.Codigo)" data-registro='{"Codigo":"@item.Codigo","Sequencia":"@item.Sequencia","Nome":"@item.Nome","CpfCnpj":"@item.CpfCnpj","EhRequerente":"@item.EhRequerente","EhAssessoria":"@item.EhAssessoria","Email":"@item.Email","EhFornecedor":"@item.EhFornecedor","EhFuncionario":"@item.EhFuncionario"}' onclick="detalhar(@item.Codigo);">
+                        <td><a href="#">@item.Codigo</a></td>
+                        <td><a href="#">@item.Nome</a></td>
+                        <td><a href="#">@item.Email</a></td>
+
+
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>
+
+@*<div class="box-footer clearfix">
+        <ul class="pagination pagination-sm no-margin pull-right">
+            <li><a href="#">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">»</a></li>
+        </ul>
+    </div>*@

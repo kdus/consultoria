@@ -1,0 +1,137 @@
+﻿@{
+    ViewBag.Title = "GridItemAssessoria";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/Sistema/acaoconfirmada.js"></script>
+<script src="~/Scripts/jquery.mask.js"></script>
+
+
+    <section class="content-header">
+        <h1>
+            Relação de Ação/Processo
+        </h1>
+
+    </section>
+
+    <section class="content">
+
+
+
+        <div class="row">
+
+
+
+            <!-- left column -->
+            <div class="col-md-12">
+
+
+                
+                <!-- general form elements -->
+                <div class="box box-primary">
+
+
+                    <form role="form" id="frmConfirmar">
+
+
+                        <div class="box-body">
+
+                            <button type="button" class="btn btn-success" onclick="Confirmar(); return false;">Confirmar</button>
+
+                            <br />
+                            <br />
+
+                            <div id="divMensagemErro" style="display:none" class="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                <h4><i class="icon fa fa-check"></i> Aviso!</h4>
+
+                                <span id="msgErroSucesso"></span>
+                            </div>
+
+                            <div class="box-body table-responsive no-padding">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <th style="width: 10px"><input type="checkbox" name="SelecionarTodos" onclick='selecionarTodos();' /></th>
+                                            <th style="width: 10px">#</th>
+                                            <th>Ação</th>
+                                            <th>Requerente</th>
+                                            <th>CPF</th>
+                                            <th>Confirmada</th>
+                                        </tr>
+
+                                        @if (Model != null && Model.Acao != null)
+            {
+                double vQtde = 0;
+                int i = 0;
+                foreach (var item in Model.Acao)
+                {
+                                               
+
+                            <tr class="cpointer">
+
+                            @if (item.Ativo == null || item.Ativo.Equals("N"))
+                            {
+                                <td><input type="checkbox" name="Codigo_@i" value="@item.Codigo"  /></td>
+                            }
+                            else
+                            {
+                                <td><input type="checkbox" name="Codigo_@i" value="@item.Codigo" checked="checked"/></td>
+                            }
+
+                                                    <td class="cpointer">@item.Codigo</td>
+                                                    <td class="cpointer">@item.Numeracao</td>
+                                                    <td class="cpointer">@item.RequerenteNome</td>
+                                                    <td class="cpointer">@item.RequerenteCpf</td>    
+
+                                                    @if (item.Ativo == null || item.Ativo.Equals("N"))
+                                                    {
+                                                        <td align="center"><a href="#"><span class="label label-danger">Não</span></a></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td align="center"><a href="#"><span class="label label-success">Sim</span></a></td>
+                                                    }
+                                                </tr>
+
+                                                vQtde++;
+                                                i++;
+                                            }
+
+                                            <tr>
+                                                <td></td>
+                                                <td>@vQtde.ToString("0")<input type="hidden" id="QtdeFiltrado" name="QtdeFiltrado" value="@i" /></td>
+                                                
+                                                <td>Registros</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button type="button" class="btn btn-success" onclick="Confirmar(); return false;">Confirmar</button>
+                           
+
+
+                           
+
+                        </div>
+                        <!-- /.box-body -->
+                      
+                    </form>
+
+
+
+                </div>
+                <!-- /.box -->
+
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+

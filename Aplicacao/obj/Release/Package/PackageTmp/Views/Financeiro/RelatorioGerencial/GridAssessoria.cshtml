@@ -1,0 +1,78 @@
+﻿<!-- /.box-header -->
+<form role="form" id="frmRelatorioGerencialGrid">
+    <div class="box-body table-responsive no-padding" id="divResultadoBusca">
+
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td align="center"><h3 class="box-title">Filtros Utilizados</h3><br /> @Html.Raw(Model.FiltrosUtilizados)</h3></td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered table-striped">
+            <tbody>
+                <tr>                   
+                    <th style="width: 10px">Data</th>
+                    <th>Ação</th>
+                    <th>Favorecido</th><!--4-->
+                    <th>Principal</th>                    
+                    <th>Sucumbência</th><!--7-->
+                    <th>Assessoria</th>
+                    <th>Pagamento<br />Cliente</th>
+                    <th>Prestação<br />de Contas</th>
+                </tr>
+
+                @if (Model != null && Model.Contas != null)
+                {
+                    double vTotalSucumbencia = 0;
+                    double vTotalAssessoriaPagamento = 0;
+                    double vTotalSaldo = 0;
+                    double vTotalPagamentos = 0;
+                    double vTotalRecebimento = 0;
+                    double vTotalPrincipal = 0;
+                    int i = 0;
+
+                    foreach (var item in Model.Contas)
+                    {
+                        <tr class="cpointer">
+                           
+                            
+                            <td align="center"><input type="hidden" id="CodigoAcao_@i" name="CodigoAcao_@i" value="@item.CodigoAcao" />@(item.DataRecebimento != null ? string.Format("{0:dd/MM/yyyy}", item.DataRecebimento) : "")</td>
+                            <td>@item.Numeracao</td>
+                            <td>@item.Cliente</td>
+                            <td align="right">@string.Format("{0:n2}", Convert.ToDouble(item.Principal))</td>                            
+                            <td align="right">@string.Format("{0:n2}", Convert.ToDouble(item.Sucumbencia))</td>
+                            <td>@item.Assessoria</td>
+                            <td align="right">@string.Format("{0:n2}", Convert.ToDouble(item.Pagamentos))</td>
+                            <td align="right">@string.Format("{0:n2}", Convert.ToDouble(item.AssessoriaPagamento))                            
+                                <input type="hidden" id="Principal_@i" name="Principal_@i" value="@item.Principal" />
+                                <input type="hidden" id="Sucumbencia_@i" name="Sucumbencia_@i" value="@item.Sucumbencia" />
+                            </td>
+
+                        </tr>
+
+                        vTotalSucumbencia += Convert.ToDouble(item.Sucumbencia);
+                        vTotalPagamentos += Convert.ToDouble(item.Pagamentos);
+                        vTotalAssessoriaPagamento += Convert.ToDouble(item.AssessoriaPagamento);
+                        vTotalRecebimento += Convert.ToDouble(item.Recebimento);
+                        vTotalPrincipal += Convert.ToDouble(item.Principal);
+                        vTotalSaldo += Convert.ToDouble(item.Saldo);
+                        i++;
+                    }
+
+                    <tr>
+                        <td></td>                        
+                        <td><input type="hidden" id="TotalSelecionado" name="TotalSelecionado" value="0" /></td>
+                        <td><input type="hidden" id="QtdeFiltrado" name="QtdeFiltrado" value="@i" />Total</td><!--4-->
+                        <td align="right">@string.Format("{0:n2}", vTotalPrincipal)</td>                        
+                        <td align="right">@string.Format("{0:n2}", vTotalSucumbencia)</td>
+                        <td></td>
+                        <td align="right">@string.Format("{0:n2}", vTotalPagamentos)</td> 
+                        <td align="right">@string.Format("{0:n2}", vTotalAssessoriaPagamento)</td>
+                        
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</form>

@@ -1,0 +1,43 @@
+﻿<div class="box-header with-border">
+    <h3 class="box-title">Resultado da Busca</h3>
+</div>
+
+<div class="box-body">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th style="width: 10px">#</th>
+                <th>Data da Venda</th>
+                <th>Faturamento Peça</th>
+                <th>Faturamento Pneu</th>
+                <th>Faturamento Mão de Obra</th>
+            </tr>
+
+            @if (Model != null && Model.PedidoVenda != null)
+            {
+                foreach (var item in Model.PedidoVenda)
+                {
+                    <tr class="cpointer" id="@("tr" + item.Id)"data-registro='{"Id":"@item.Id","CODPES":"@item.CODPES","Data":"@item.Data","caixa_n":"@item.caixa_n","cmv_pneu":"@item.cmv_pneu","cmv_peca":"@item.cmv_peca","servico_terceiro":"@item.servico_terceiro","faturamento_peca":"@item.faturamento_peca","faturamento_pneu":"@item.faturamento_pneu","faturamento_maoobra":"@item.faturamento_maoobra", "qtd_veiculo":"@item.qtd_veiculo"}' onclick="detalhar(@item.Id);">
+
+                        <td><a href="#">@item.Id</a></td>
+                        <td><a href="#">@item.Data</a></td>
+                        <td><a href="#">@item.faturamento_peca</a></td>
+                        <td><a href="#">@item.faturamento_pneu  </a></td>
+                        <td><a href="#">@item.faturamento_maoobra  </a></td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>
+
+@*<div class="box-footer clearfix">
+        <ul class="pagination pagination-sm no-margin pull-right">
+            <li><a href="#">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">»</a></li>
+        </ul>
+    </div>*@

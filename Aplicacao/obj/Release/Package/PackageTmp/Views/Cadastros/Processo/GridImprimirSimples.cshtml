@@ -1,0 +1,40 @@
+﻿@using BLL;
+
+<div class="box-body table-responsive no-padding">
+    <br />
+    <center><b>RELATÓRIO DE CADASTROS - SIMPLES</b></center>
+    <br />
+    <table class="table table-bordered">
+        <tbody>
+            <tr>               
+                <th>Nome</th>
+                <th align="center">CPF</th>
+                <th>Ação</th>
+            </tr>
+            
+            @if (Model != null && Model.Acao != null)
+            {
+                double vQtde = 0;
+
+                foreach (var item in Model.Acao)
+                {
+                    <tr>
+                        <td>@item.RequerenteNome</td>
+                        <td align="center">@item.RequerenteCpf</td>
+                        <td align="center">@item.Numeracao</td>
+                    </tr>
+
+                    vQtde++;
+                }
+
+                <tr>
+                    <td>Quantidade: @vQtde.ToString("0")</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+
+                </tr>
+            }           
+
+        </tbody>
+    </table>
+</div>

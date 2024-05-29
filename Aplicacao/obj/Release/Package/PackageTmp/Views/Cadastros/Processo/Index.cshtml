@@ -1,0 +1,781 @@
+﻿@using MODELS;
+@using BEAN;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="~/Scripts/Sistema/processo.js"></script>
+<script src="~/Scripts/jquery.mask.js"></script>
+
+
+@*http://parmezani.net/cadastro-de-pedido-e-itens-com-asp-net-mvc/*@
+
+<section class="content-header">
+    <h1>
+        Ação/Processo
+    </h1>
+
+</section>
+
+<section class="content">
+
+
+
+    <div class="row">
+
+
+
+        <!-- left column -->
+        <div class="col-md-12">
+
+
+
+            <!-- general form elements -->
+            <div class="box box-primary">
+
+
+
+                <form role="form" id="frmProcesso">
+
+
+                    <div class="box-body" id="divFormulario">
+
+                        <button type="button" class="btn btn-info" onclick="novo(); return false;">Novo</button>
+
+                        @if ((((UsuarioBEAN)HttpContext.Current.Session["session_Usuario"]).Nivel).Equals("S"))
+                        {                            
+                            <button type="button" class="btn btn-success" onclick="gravar(); return false;">Gravar</button>                        
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-excluir">Excluir</button>
+                        }
+
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default" onclick="pesquisar()">Pesquisar</button>
+                        
+                        @if ((((UsuarioBEAN)HttpContext.Current.Session["session_Usuario"]).Nivel).Equals("S"))
+                        {
+                            <!-- /.Esse modal está dentro do Grid.cshtml-->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-enviarRelacao">Enviar Relação</button>
+                        }
+
+                        <!-- /.modal Pesquisa-->
+                        <div class="modal fade" id="modal-default">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Parâmetros da Pesquisa</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Empresa</label>
+                                                            <select class="form-control" style="width: 100%;" name="BuscaMatrizFilial" id="BuscaMatrizFilial">
+                                                                <option value="0" selected>Empresa...</option>
+                                                                @foreach (var item in Model.Empresas)
+                                                                {
+                                                                    <option value="@item.Codigo">@item.Nome</option>
+                                                                }
+                                                            </select>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="BuscaCodigo" name="BuscaCodigo" placeholder="#">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="BuscaRequerente" name="BuscaRequerente" placeholder="Requerente">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-9">
+                                                            <div class="form-group">
+                                                                <label for="exampleInputEmail1">Assessoria</label>
+                                                                <input type="text" class="form-control" id="BuscaAssessoria" name="BuscaAssessoria" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="exampleInputEmail1">Sem Assessoria</label>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" name="BuscaSemAssessoria" id="BuscaSemAssessoria"> Sem Assessoria
+                                                                </label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-8">
+                                                            <div class="form-group">
+                                                                <label for="exampleInputEmail1">Numeração</label>
+                                                                <input type="text" class="form-control" id="BuscaNumeracao" name="BuscaNumeracao" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="exampleInputEmail1">Ano Numeração</label>
+                                                                <input type="text" class="form-control" id="BuscaAnoNumeracao" name="BuscaAnoNumeracao" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label>Data De</label>
+                                                            <div class="input-group date">
+                                                                <div class="input-group-addon">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </div>
+                                                                <input type="text" class="form-control pull-right" id="BuscaDataDe" name="BuscaDataDe" data-date-format="dd/mm/yyyy" autocomplete="off">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <label>Data Até</label>
+                                                            <div class="input-group date">
+                                                                <div class="input-group-addon">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </div>
+                                                                <input type="text" class="form-control pull-right" id="BuscaDataAte" name="BuscaDataAte" data-date-format="dd/mm/yyyy" autocomplete="off">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label>Tipo de Ação</label>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="BuscaTipoAcao" name="BuscaTipoAcao" placeholder="">
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" name="BuscaEhRecebido"> Recebido
+                                                                </label>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-md-4">
+
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" name="BuscaNaoRecebido"> Não Recebido
+                                                                </label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-info">Imprimir</button>
+                                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                                <span class="caret"></span>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#" data-toggle="modal" data-target="#modal-imprimir" onclick="buscaSimples('grdImprimirSimples')">Simples</a></li>
+                                                @*<li><a href="#" data-toggle="modal" data-target="#modal-default">Envio Assessoria</a></li>*@
+
+                                            </ul>
+                                        </div>
+
+                                        @*<div class="btn-group">
+                                        <button type="button" class="btn btn-primary">Buscar</button>
+                                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                                <span class="caret"></span>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#" data-dismiss="modal" data-toggle="collapse" onclick="buscar('DATA'); return false;">Ordem de Data</a></li>
+                                                <li><a href="#" data-dismiss="modal" data-toggle="collapse" onclick="buscar('REQUERENTE'); return false;">Ordem de Requerente</a></li>
+
+                                            </ul>
+                                        </div>
+                                        *@
+                                        &nbsp;
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="buscar('REQUERENTE'); return false;">Buscar por Requerente</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="buscar('DATA'); return false;">Buscar por Data</button>
+
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                                        <!--<button type="submit" class="btn btn-primary collapsed" data-dismiss="modal" data-toggle="collapse" onclick="buscar(); return false;"> Buscar </button>-->
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+                        
+                        <!-- /.modal Excluir-->
+                        <div class="modal fade" id="modal-excluir">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Exclusão de registro</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        Deseja realmente excluir?                                          
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Não</button>
+                                        <button type="submit" class="btn btn-primary collapsed" data-dismiss="modal" data-toggle="collapse" onclick="excluir(); return false;">Sim</button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+                        <!-- /.modal Imprimir-->
+                        <div class="modal fade" id="modal-imprimir">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Relatório - Simples</h4>
+                                    </div>
+                                    <div class="modal-body" id="impressao">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                               
+                                                <div class="box collapse" id="grdImprimirSimples">
+
+                                                </div>                                           
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">                                             
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal" onclick="EnviarEmailRelacao('marianavictoretti@eajadvogados.com.br', 'Relatório de Cadastro - Simples', '#grdImprimirSimples'); return false;">Enviar E-mail</button>
+                                        
+                                        <button type="submit" class="btn btn-primary collapsed" data-dismiss="modal" data-toggle="collapse" onclick="imprimir('modal-imprimir');">Imprimir</button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+
+
+
+                        <br /><br />
+
+
+                        <div id="divMensagemErro" style="display:none" class="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h4><i class="icon fa fa-check"></i> Aviso!</h4>
+
+                            <span id="msgErroSucesso"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Empresa</label>
+                                    <select class="form-control select2" style="width: 100%;" name="MatrizFilial" id="MatrizFilial">
+                                        <option value="0" selected>Empresa/Pessoa...</option>
+                                        @foreach (var item in Model.Empresas)
+                                        {
+                                            <option value="@item.Codigo" @(item.Codigo == Model.MatrizFilial ? "selected" : "")>@item.Nome</option>
+                                        }
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-1">
+                                <div class="form-group">        
+                                    <label>#</label>                                
+                                    <input type="text" class="form-control" id="Codigo" name="Codigo" value="@Model.Codigo" disabled="disabled" placeholder="Código">
+                                    <input type="hidden" class="form-control" name="CodigoOrigem" id="CodigoOrigem" value="@Model.Codigo">
+                                    <input type="hidden" class="form-control" id="Sequencia" name="Sequencia" placeholder="" disabled="disabled" value="@Model.Sequencia">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">    
+                                    <label>Data</label>                               
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" id="Data" name="Data" placeholder="Data" maxlength="10" onkeypress="mascaraData(this,event)" data-date-format="dd/mm/yyyy" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">  
+                                    <label>Numeração</label>                                      
+                                    <input type="text" class="form-control" id="Numeracao" name="Numeracao" placeholder="Numeração">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">    
+                                    <label>Valor</label>                                    
+                                    <input type="text" class="form-control" id="Valor" name="Valor" placeholder="Valor Real">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Tipo</label>    
+                                    <select class="form-control select2" style="width: 100%;" name="Tipo" id="Tipo">
+                                        <option value="0" selected>Tipo - Selecione...</option>
+
+                                        @foreach (var item in Model.Tipos)
+                                        {
+                                            <option value="@item.Codigo">@item.Nome</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                           
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Responsável</label>
+                                    <select class="form-control select2" style="width: 100%;" name="Responsavel" id="Responsavel">
+                                        <option value="0" selected>SELECIONE</option>
+
+                                        @foreach (var item in Model.Responsavels)
+                                        {
+                                            <option value="@item.Codigo">@item.Nome</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label>Requerente</label>
+                                    <select class="form-control select2" style="width: 100%;" name="Requerente" id="Requerente">
+                                        <option value="0" selected>SELECIONE</option>
+
+                                        @foreach (var item in Model.Requerentes)
+                                        {                                            
+                                            <option value="@item.Codigo" @(item.Codigo == Model.Requerente ? "selected" : "")>@item.Nome</option>
+                                        }
+                                    </select>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Responsável Financeiro</label>
+                                    <select class="form-control select2" style="width: 100%;" name="ResponsavelFinanceiro" id="ResponsavelFinanceiro">
+                                        <option value="0" selected>SELECIONE</option>
+
+                                        @foreach (var item in Model.ResponsavelFinanceiros)
+                                        {
+                                            <option value="@item.Codigo">@item.Nome</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Assessoria</label>
+                                    <select class="form-control select2" style="width: 100%;" name="Assessoria" id="Assessoria">
+                                        <option value="0" selected>SELECIONE</option>
+
+                                        @foreach (var item in Model.Assessorias)
+                                        {
+                                            <option value="@item.Codigo">@item.Nome</option>
+                                        }
+                                    </select>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+
+                    @if ((((UsuarioBEAN)HttpContext.Current.Session["session_Usuario"]).Nivel).Equals("S"))
+                    {
+                        <button type="button" class="btn btn-success" onclick="gravar(); return false;">Gravar</button>
+                        <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modal-cp" onclick="LimparPopUpCp()" disabled id="btnAbreCp">Contas a Pagar</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-cr" onclick="LimparPopUpCr()" disabled id="btnAbreCr">Contas a Receber</button>
+                    }
+                        <!-- /.modal CP-->
+                        <div class="modal modal-cp fade in" id="modal-cp">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title"><font color="#d73925">Gerar contas a Pagar</font></h4>
+                                    </div>
+                                    <div class="modal-body">
+
+
+                                        <!--furm-->
+
+                                        <div class="row">
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">De</label>                                                    
+                                                    <input type="text" class="form-control" id="ParcelaDeContasPagar" name="ParcelaDeContasPagar" placeholder="" maxlength="2">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Até</label>
+                                                    <input type="text" class="form-control" id="ParcelaAteContasPagar" name="ParcelaAteContasPagar" placeholder="" maxlength="2">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Valor</label>
+                                                    <input type="text" class="form-control" id="ValorContasPagar" name="ValorContasPagar" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Vencimento</label>
+                                                    <div class="input-group date">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                        <input type="text" class="form-control pull-right" id="VencimentoContasPagar" name="VencimentoContasPagar" data-date-format="dd/mm/yyyy" autocomplete="off" onkeypress="mascaraData(this,event)">
+                                                    </div>   
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-7">
+                                                <label>Favorecido</label>
+                                                <select class="form-control select2" style="width: 100%;" name="Favorecido" id="Favorecido">
+                                                    <option value="0" selected>Favorecido</option>
+                                                    @foreach (var item in Model.Requerentes)
+                                                    {
+                                                        <option value="@item.Codigo" @(item.Codigo == Model.Requerente ? "selected" : "")>@item.Nome</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Sbc</label>
+                                                    <input type="text" class="form-control" id="Sucumbencia" name="Sucumbencia" placeholder="">
+                                                </div>
+                                            </div>                              
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Tipo</label>
+                                                    <select class="form-control" style="width: 100%;" name="TipoRecebimentoPagamento" id="TipoRecebimentoPagamento">
+                                                        <option value="0" selected>Tipo...</option>
+                                                        @foreach (var item in Model.TiposRecebimentoPagamento)
+                                                        {
+                                                            <option value="@item.Codigo">@item.Nome</option>
+                                                        }
+                                                    </select>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!--fim frm-->
+
+
+                                        <div id="divMensagemErroModal" style="display:none" class="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                            <h4><i class="icon fa fa-check"></i> Aviso!</h4>
+
+                                            <span id="msgErroSucessoModal"></span>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-default collapsed" data-dismiss="modal" data-toggle="collapse" onclick="gravarcp(); return false;"> Gerar Contas </button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        <!-- /.modal -->
+
+                        <!-- /.modal CR-->
+                        <div class="modal modal-cr fade in" id="modal-cr">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title"><font color="#367fa9">Gerar Contas a Receber</font></h4>
+                                    </div>
+                                    <div class="modal-body">
+
+
+                                        <!--furm-->
+
+                                        <div class="row">
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">De</label>                                                    
+                                                    <input type="text" class="form-control" id="ParcelaDeContasReceber" name="ParcelaDeContasReceber" placeholder="" maxlength="2">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Até</label>
+                                                    <input type="text" class="form-control" id="ParcelaAteContasReceber" name="ParcelaAteContasReceber" placeholder="" maxlength="2">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Valor</label>
+                                                    <input type="text" class="form-control" id="ValorContasReceber" name="ValorContasReceber" placeholder="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Valor Recebido</label>
+                                                    <input type="text" class="form-control" id="ValorRecebidoContasReceber" name="ValorRecebidoContasReceber" placeholder="">
+                                                </div>
+                                            </div>
+
+                                         
+
+                                            </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Descrição</label>
+                                                    <input type="text" class="form-control" id="DescricaoContaReceber" name="DescricaoContaReceber" placeholder="">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                            <div class="row">
+
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Principal</label>
+                                                        <input type="text" class="form-control" id="Principal" name="Principal" placeholder="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Tipo</label>
+                                                        <select class="form-control" style="width: 100%;" name="TipoRecebimentoPagamentoRec" id="TipoRecebimentoPagamentoRec">
+                                                            <option value="0" selected>Tipo...</option>
+                                                            @foreach (var item in Model.TiposRecebimentoPagamento)
+                                                            {
+                                                                <option value="@item.Codigo">@item.Nome</option>
+                                                            }
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Conta Bancária</label>
+                                                        <select class="form-control select2" style="width: 100%;" name="ContaBancaria" id="ContaBancaria">
+                                                            <option value="0" selected>Conta...</option>
+                                                            @foreach (var item in Model.ContasBancaria)
+                                                            {
+                                                                <option value="@item.Codigo" @(item.Codigo == Model.ContaBancaria ? "selected" : "")>@item.Nome</option>
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Vencimento</label>
+                                                        @*<input type="text" class="form-control" id="VencimentoContasReceber" name="VencimentoContasReceber" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)">*@
+                                                        <div class="input-group date">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control pull-right" id="VencimentoContasReceber" name="VencimentoContasReceber" data-date-format="dd/mm/yyyy" autocomplete="off" onkeypress="mascaraData(this,event)">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-8">
+                                                    <label>Favorecido</label>
+                                                    <select class="form-control select2" style="width: 100%;" name="Cliente" id="Cliente">
+                                                        <option value="0" selected>Favorecido</option>
+                                                        @foreach (var item in Model.Requerentes)
+                                                        {
+                                                            <option value="@item.Codigo" @(item.Codigo == Model.Requerente ? "selected" : "")>@item.Nome</option>
+                                                        }
+                                                    </select>
+                                                </div>
+
+
+                                            </div>
+
+                                            <!--fim frm-->
+
+
+
+                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-default collapsed" data-dismiss="modal" data-toggle="collapse" onclick="gravarcr(); return false;"> Gerar Contas </button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        <!-- /.modal -->
+
+                      
+
+                    </div>
+                </form>
+
+
+
+            </div>
+            <!-- /.box -->
+
+        </div>
+
+
+
+        <!-- /.row -->
+
+        @if ((((UsuarioBEAN)HttpContext.Current.Session["session_Usuario"]).Nivel).Equals("S"))
+        {
+        <div class="col-md-12" id="Abas">
+            <!-- Custom Tabs -->
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false">Contas a Pagar</a></li>
+                    <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="true">Contas a Receber</a></li>
+                    <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false">Valores Antecipados</a></li>                    
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_1">
+                     
+                        <div class="box collapse" id="grdContasPagar">
+
+                        </div>
+
+                    </div>
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane" id="tab_2">
+                        <div class="box collapse" id="grdContasReceber">
+
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane" id="tab_3">
+                       
+                        <div class="box collapse" id="grdValoresAntecipados">
+
+                        </div>
+                    </div>
+                    <!-- /.tab-pane -->
+                </div>
+                <!-- /.tab-content -->
+            </div>
+            <!-- nav-tabs-custom -->
+        </div>
+        }
+
+    </div>
+
+    <div class="box collapse" id="grdBusca">
+
+    </div>
+
+ 
+
+
+</section>

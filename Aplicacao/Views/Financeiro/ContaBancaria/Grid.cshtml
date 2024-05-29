@@ -1,0 +1,27 @@
+﻿<div class="box-header with-border">
+    <h3 class="box-title">Resultado da Busca</h3>
+</div>
+
+<div class="box-body table-responsive no-padding">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th style="width: 10px">#</th>
+                <th>Nome</th>
+            </tr>
+
+            @if (Model != null && Model.Contas != null)
+            {
+                foreach (var item in Model.Contas)
+                {
+                    <tr class="cpointer" onclick="detalhar(@item.Codigo);">
+                        <td><a href="#">@item.Codigo</a></td>
+                        <td><a href="#">@item.Nome</a></td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,22 @@
+C:\Docs\Anderson\Sistemas\SisEaj\BEAN\bin\Release\BEAN.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BEAN\bin\Release\BEAN.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\BEAN\obj\Release\BEAN.csprojResolveAssemblyReference.cache
+C:\Docs\Anderson\Sistemas\SisEaj\BEAN\obj\Release\BEAN.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BEAN\obj\Release\BEAN.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BEAN\bin\Release\BEAN.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BEAN\bin\Release\BEAN.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BEAN\obj\Release\BEAN.csproj.AssemblyReference.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BEAN\obj\Release\BEAN.csproj.CoreCompileInputs.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BEAN\obj\Release\BEAN.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BEAN\obj\Release\BEAN.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BEAN\bin\Release\BEAN.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BEAN\bin\Release\BEAN.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BEAN\obj\Release\BEAN.csprojResolveAssemblyReference.cache
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BEAN\obj\Release\BEAN.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BEAN\obj\Release\BEAN.pdb
+D:\SisCarloTete2\BEAN\bin\Release\BEAN.dll
+D:\SisCarloTete2\BEAN\bin\Release\BEAN.pdb
+D:\SisCarloTete2\BEAN\obj\Release\BEAN.csproj.AssemblyReference.cache
+D:\SisCarloTete2\BEAN\obj\Release\BEAN.csproj.CoreCompileInputs.cache
+D:\SisCarloTete2\BEAN\obj\Release\BEAN.dll
+D:\SisCarloTete2\BEAN\obj\Release\BEAN.pdb

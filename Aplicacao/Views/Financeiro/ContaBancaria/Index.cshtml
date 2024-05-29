@@ -1,0 +1,146 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/Sistema/contabancaria.js"></script>
+
+
+
+<section class="content-header">
+    <h1>
+        Conta Bancária
+    </h1>
+
+</section>
+
+<section class="content">
+
+    <form role="form" id="frmContaBancaria">
+
+        
+
+            <div class="col-md-3"> 
+                <div class="box collapse" id="grdBusca">
+
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Cadastros</h3>
+                    </div>
+                    
+                   
+                    <div class="margin">                    
+                       
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">Extrato</button>
+     
+                    </div>
+                   
+
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Código</label>
+                                <input type="hidden" class="form-control" id="Codigo" name="Codigo">
+                                <input type="text" class="form-control" id="Sequencia" name="Sequencia" placeholder="">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-11">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nome</label>
+                                <input type="text" class="form-control" id="Nome" name="Nome" placeholder="">
+                            </div>
+                        </div>
+
+                    
+
+                  
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Agência</label>                            
+                            <input type="text" class="form-control" id="Agencia" name="Agencia" placeholder="">
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Número</label>
+                            <input type="text" class="form-control" id="Numero" name="Numero" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Dígito</label>
+                            <input type="text" class="form-control" id="Digito" name="Digito" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Saldo Atual</label>
+                            <input type="text" class="form-control" id="Valor" name="Valor" placeholder="" disabled="disabled">
+                        </div>
+                    </div>
+
+                  
+
+                        <div class="col-md-12" id="Abas">
+                            <!-- Custom Tabs -->
+                            <div class="nav-tabs-custom">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false">Saldos</a></li>                                    
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab_1">
+
+                                        <button type="button" class="btn btn-success">Fechar período</button>                        
+
+                                        <div class="box collapse" id="grdSaldos">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane active" id="tab_extrato">                                        
+
+                                        <div class="box collapse" id="grdExtrato">
+
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>                           
+                        </div>
+                   
+                        
+
+                    <div class="box-footer no-padding">
+
+                    </div>
+                </div>
+                <!-- /. box -->
+            </div>
+               
+             
+       
+
+    </form>
+
+
+    <script>
+
+window.onload = function ()
+{
+   buscar()
+}
+
+   </script>
+
+
+</section>

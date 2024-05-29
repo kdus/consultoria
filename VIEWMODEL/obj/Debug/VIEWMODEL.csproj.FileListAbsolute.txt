@@ -1,0 +1,22 @@
+C:\Docs\Anderson\Sistemas\SisEaj\VIEWMODEL\bin\Debug\VIEWMODEL.dll
+C:\Docs\Anderson\Sistemas\SisEaj\VIEWMODEL\bin\Debug\VIEWMODEL.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\VIEWMODEL\obj\Debug\VIEWMODEL.csprojResolveAssemblyReference.cache
+C:\Docs\Anderson\Sistemas\SisEaj\VIEWMODEL\obj\Debug\VIEWMODEL.dll
+C:\Docs\Anderson\Sistemas\SisEaj\VIEWMODEL\obj\Debug\VIEWMODEL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\VIEWMODEL\bin\Debug\VIEWMODEL.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\VIEWMODEL\bin\Debug\VIEWMODEL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\VIEWMODEL\obj\Debug\VIEWMODEL.csproj.AssemblyReference.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\VIEWMODEL\obj\Debug\VIEWMODEL.csproj.CoreCompileInputs.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\VIEWMODEL\obj\Debug\VIEWMODEL.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\VIEWMODEL\obj\Debug\VIEWMODEL.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\VIEWMODEL\bin\Debug\VIEWMODEL.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\VIEWMODEL\bin\Debug\VIEWMODEL.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\VIEWMODEL\obj\Debug\VIEWMODEL.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\VIEWMODEL\obj\Debug\VIEWMODEL.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\VIEWMODEL\obj\Debug\VIEWMODEL.csprojResolveAssemblyReference.cache
+D:\SisCarloTete2\VIEWMODEL\bin\Debug\VIEWMODEL.dll
+D:\SisCarloTete2\VIEWMODEL\bin\Debug\VIEWMODEL.pdb
+D:\SisCarloTete2\VIEWMODEL\obj\Debug\VIEWMODEL.csproj.AssemblyReference.cache
+D:\SisCarloTete2\VIEWMODEL\obj\Debug\VIEWMODEL.csproj.CoreCompileInputs.cache
+D:\SisCarloTete2\VIEWMODEL\obj\Debug\VIEWMODEL.dll
+D:\SisCarloTete2\VIEWMODEL\obj\Debug\VIEWMODEL.pdb

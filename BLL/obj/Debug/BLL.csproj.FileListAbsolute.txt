@@ -1,0 +1,60 @@
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Debug\BLL.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Debug\BLL.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Debug\BEAN.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Debug\DAO.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Debug\VIEWMODEL.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Debug\MySql.Data.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Debug\Dapper.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Debug\BEAN.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Debug\DAO.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Debug\VIEWMODEL.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Debug\Dapper.xml
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\obj\Debug\BLL.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\obj\Debug\BLL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Debug\BLL.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Debug\BLL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Debug\BEAN.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Debug\DAO.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Debug\VIEWMODEL.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Debug\MySql.Data.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Debug\Dapper.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Debug\BEAN.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Debug\DAO.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Debug\VIEWMODEL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Debug\Dapper.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\obj\Debug\BLL.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\obj\Debug\BLL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Debug\BLL.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Debug\BLL.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Debug\BEAN.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Debug\DAO.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Debug\VIEWMODEL.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Debug\MySql.Data.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Debug\Dapper.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Debug\BEAN.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Debug\DAO.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Debug\VIEWMODEL.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Debug\Dapper.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\obj\Debug\BLL.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\obj\Debug\BLL.pdb
+D:\SisCarloTete2\BLL\bin\Debug\BLL.dll
+D:\SisCarloTete2\BLL\bin\Debug\BLL.pdb
+D:\SisCarloTete2\BLL\bin\Debug\BEAN.dll
+D:\SisCarloTete2\BLL\bin\Debug\DAO.dll
+D:\SisCarloTete2\BLL\bin\Debug\VIEWMODEL.dll
+D:\SisCarloTete2\BLL\bin\Debug\MySql.Data.dll
+D:\SisCarloTete2\BLL\bin\Debug\Dapper.dll
+D:\SisCarloTete2\BLL\bin\Debug\BEAN.pdb
+D:\SisCarloTete2\BLL\bin\Debug\DAO.pdb
+D:\SisCarloTete2\BLL\bin\Debug\VIEWMODEL.pdb
+D:\SisCarloTete2\BLL\bin\Debug\Dapper.xml
+D:\SisCarloTete2\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\SisCarloTete2\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\SisCarloTete2\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\SisCarloTete2\BLL\obj\Debug\BLL.dll
+D:\SisCarloTete2\BLL\obj\Debug\BLL.pdb

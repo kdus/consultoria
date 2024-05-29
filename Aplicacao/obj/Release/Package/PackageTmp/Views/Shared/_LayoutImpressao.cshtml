@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Eaj Advogados</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+          <![endif]-->
+    <style>
+        /*CSS para impressão*/
+        @@media print {
+            * {
+                background: transparent !important;
+                text-shadow: none !important;
+                filter: none !important;
+                -ms-filter: none !important;
+                padding-left: none !important;
+                font-size: !important;
+                -webkit-print-color-adjust: exact !important;
+                ;
+                printer-colors: exact !important;
+                ;
+                color-adjust: exact !important;
+                ;
+            }
+
+            label {
+                font-weight: bold !important;
+                ;
+            }
+
+            table.tablecinza {
+                background-color: #ececec !important;
+                -webkit-print-color-adjust: exact !important;
+                ;
+            }
+
+              table.tablebranca {
+                background-color: #FFFFFF !important;
+                -webkit-print-color-adjust: exact !important;
+                ;
+            }
+
+            thead.theadcolor {
+                background-color: #FFFFFF !important;
+                -webkit-print-color-adjust: exact !important;
+                ;
+                printer-colors: exact !important;
+                color-adjust: exact !important;
+            }
+
+
+            td.imgbg {               
+                background-repeat: no-repeat !important;
+                height: 100px !important;
+                background-color: #1a5481 !important;
+                ;
+            }
+
+            div.nomedocumento {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact !important;
+                color: #FFFFFF !important;
+            }
+
+            .nomedocumento {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact !important;
+                color: #FFFFFF !important;
+            }
+
+            table.rodape {
+                display: none !important;
+            }
+
+            .tableprincipal {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table class="tableprincipal" width="100%" border="0" cellpadding="0" cellspacing="0"
+           style="border:#FFFFFF solid 1px; border-collapse:collapse; margin-top:10px;color:#000001;">
+        <tbody>
+           
+            <tr bgcolor="#FFFFFF">
+                <td>
+                    @RenderBody()
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>

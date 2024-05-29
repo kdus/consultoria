@@ -1,0 +1,72 @@
+﻿@using MODELS
+
+@{
+    ViewBag.Title = "Imprimir";    
+}
+
+<div class="margem_comprovante">
+    <link rel="stylesheet" type="text/css" media="screen, print" href="~/Content/style.css" />
+
+    <div id='conteudo' class='conteudo_impressao_extrato'>
+        <div id="fEx:dexs_0:divMaster1" class="print no-page-break-after">
+            <ul class="list_infos header_comprovante after none" style="height: 90px">
+                <li class="item pt0 pb0"><img src="" height="83" width="107" class="tabindex tabfirst" /></li>
+                <li class="info">
+                    <h2>Anderson-Son</h2>
+                    <p class="pb10"><span class="clr"><br /></span></p>
+                    <p><span class="fGray">Data: </span>01/04/2019 - 11h44</p>
+                    <p><span class="fGray">Nome: </span>ANDERSON DE SOUZA E SILVA</p>
+                </li>
+            </ul>
+            <table class="tabSaldosExtratos">
+                <thead>
+                    <tr>
+                        <th style="width: 1%"><div class="alignLeft bl0">Data</div></th>
+                        <th><div class="alignLeft">Hist&#243;rico</div></th>
+                        <th><div class="alignLeft">Hist&#243;rico</div></th>
+                        <th style="width: 131px"><div class="alignRight br0">Saldo (R$)</div></th>
+                    </tr>
+                </thead>
+
+                <tbody id="fEx:dexs_0:viewSaldosInvest:datalancant:tbody_element">
+                    <tr>
+                        <td class="alignCenter"><div class="alignCenter">25/03/19</div></td>
+                        <td><div> Saldo Invest F&#225;cil</div></td>
+                        <td><div> Saldo Invest F&#225;cil</div></td>
+                        <td class="alignRight"><div class="alignRight valor"><strong> 25.878,18</strong></div></td>
+                    </tr>
+                </tbody>
+
+            </table>
+            </div>
+        </div>
+ </div>
+
+            <style type="text/css">
+                .margem_comprovante {
+                    width: 740px;
+                    !important;
+                }
+
+                #conteudo .mioloFs12 {
+                    font-size: 1.00em;
+                }
+
+                #conteudo .mioloFs13 {
+                    font-size: 1.00em;
+                }
+
+                #conteudo .mioloFs14 {
+                    font-size: 1.00em;
+                }
+            </style>
+
+
+
+          
+
+
+
+
+            
+         

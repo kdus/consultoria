@@ -1,0 +1,100 @@
+﻿@using MODELS
+
+@{
+    ViewBag.Title = "Impressao";
+    Layout = "~/Views/Shared/_LayoutImpressao.cshtml";
+}
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td width="10">&nbsp;</td>
+            <td width="500">
+                <table class="tablebranca" width="100%" border="0" cellspacing="0" cellpadding="0"
+                       style="border-collapse: collapse; background-color: #FFFFFF; padding-left: 10px;">
+                    <tbody>
+                        <tr height="100">
+                            <td align="center">
+                                <label><font face="verdana" size="3">RELATÓRIO DE CONTAS A PAGAR</font><font face="verdana" size="1">@Html.Raw(Model.FiltrosUtilizados)</font></label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </td>
+            <td width="10">&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="10">&nbsp;</td>
+            <td width="500">
+                <table width="100%" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; background-color: #fff;">
+                    <thead style="background-color: #FFFFFF; color: #fff;" class="theadcolor">
+                        <tr height="30">
+                            <th style="text-align: center;color: #000"><font face="verdana" size="1">#</font></th>
+                            <th style="text-align: left;color: #000"><font face="verdana" size="1">FAVORECIDO</font></th>
+                            <th style="text-align: left;color: #000"><font face="verdana" size="1">DESCRIÇÃO</font></th>
+                            <th style="text-align: center;color: #000"><font face="verdana" size="1">VENCTO</font></th>
+                            <th style="text-align: right;color: #000"><font face="verdana" size="1">VALOR&nbsp;</font></th>
+                            <th style="text-align: right;color: #000"><font face="verdana" size="1">RECEBIDO&nbsp;</font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @if (Model != null && Model.Contas != null)
+                        {
+                            double vTotal = 0;
+                            double vTotalPago = 0;
+                            int i = 0;
+
+                            foreach (var item in Model.Contas)
+                            {
+                                if (i % 2 == 0)
+                                {
+                                    <tr bgcolor="#CCCCCC">
+                                        <td style="text-align: center;color: #000"><font face="verdana" size="1">@item.Codigo</font></td>
+                                        <td style="text-align: left;color: #000"><font face="verdana" size="1">&nbsp;@item.FavorecidoNome</font></td>
+                                        <td style="text-align: left;color: #000"><font face="verdana" size="1">&nbsp;@item.Descricao</font></td>
+                                        <td style="text-align: center;color: #000"><font face="verdana" size="1">@(item.Vencimento == null ? "" : String.Format("{0:dd/MM/yyyy}", Convert.ToDateTime(item.Vencimento)))</font></td>
+                                        <td style="text-align: right;color: #000"><font face="verdana" size="1">@string.Format("{0:n2}", Convert.ToDouble(item.Valor))&nbsp;</font></td>
+                                        <td style="text-align: right;color: #000"><font face="verdana" size="1">@string.Format("{0:n2}", Convert.ToDouble(item.ValorPago))&nbsp;</font></td>
+                                    </tr>
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td style="text-align: center;color: #000"><font face="verdana" size="1">@item.Codigo</font></td>
+                                        <td style="text-align: left;color: #000"><font face="verdana" size="1">&nbsp;@item.FavorecidoNome</font></td>
+                                        <td style="text-align: left;color: #000"><font face="verdana" size="1">&nbsp;@item.Descricao</font></td>
+                                        <td style="text-align: center;color: #000"><font face="verdana" size="1">@(item.Vencimento == null ? "" : String.Format("{0:dd/MM/yyyy}", Convert.ToDateTime(item.Vencimento)))</font></td>
+                                        <td style="text-align: right;color: #000"><font face="verdana" size="1">@string.Format("{0:n2}", Convert.ToDouble(item.Valor))&nbsp;</font></td>
+                                        <td style="text-align: right;color: #000"><font face="verdana" size="1">@string.Format("{0:n2}", Convert.ToDouble(item.ValorPago))&nbsp;</font></td>
+                                    </tr>
+                                }
+
+
+                                vTotal += item.Valor;
+                                vTotalPago += item.ValorPago;
+                                i++;
+                            }
+
+                            <tr>    
+                                <td></td>
+                                <td></td>
+                                <td></td>                
+                                <td style="text-align: right;color: #000"><font face="verdana" size="2"><b>Total R$&nbsp;</b></font></td>
+                                <td style="text-align: right;color: #000"><font face="verdana" size="2"><b>@string.Format("{0:n2}", vTotal)&&nbsp;</b></font></td>   
+                                <td style="text-align: right;color: #000"><font face="verdana" size="2"><b>@string.Format("{0:n2}", vTotalPago)&nbsp;</b></font></td>   
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </td>
+            <td width="10">&nbsp;</td>
+        </tr>
+
+
+    </tbody>
+</table>

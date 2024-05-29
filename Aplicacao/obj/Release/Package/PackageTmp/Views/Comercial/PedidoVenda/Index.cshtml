@@ -1,0 +1,228 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="~/Scripts/Sistema/pedidovenda.js"></script>
+<script src="~/Scripts/jquery.mask.js"></script>
+
+<section class="content-header">
+    <h1>
+        Vendas        
+    </h1>
+   
+</section>
+
+
+
+
+<section class="content">
+
+
+
+    <div class="row">
+
+
+
+        <!-- left column -->
+        <div class="col-md-12">
+
+
+
+            <!-- general form elements -->
+            <div class="box box-primary">
+
+
+
+                <form role="form" id="frmpedidovenda">
+
+
+                    <div class="box-body">
+
+                        <button type="button" class="btn btn-pinterest" onclick="novo(); return false;">Novo</button>
+                        <button type="button" class="btn btn-primary" onclick="gravar(); return false;">Gravar</button>
+                        <button type="button" class="btn btn-warning" onclick="excluir(); return false;">Excluir</button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-pesquisa">Pesquisar</button>
+                        <button type="button" class="btn btn-warning" onclick="imprimir(); return false;">Imprimir</button>
+
+                        <div class="modal fade" id="modal-pesquisa">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Parâmetros da Pesquisa</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="BuscaCliente">Empresa/Filial</label>
+                                        <select class="form-control select2" style="width: 100%;" name="BuscaCliente" id="BuscaCliente">
+                                            <option value="0" selected>Empresa/Filial</option>
+                                            @foreach (var item in Model.Clientes)
+                                            {
+                                                <option value="@item.Codigo">@item.Nome</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                                        <button type="submit" class="btn btn-primary collapsed" data-dismiss="modal" data-toggle="collapse" onclick="buscar(); return false;"> Buscar </button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        <!-- /.modal -->
+
+                        <br /><br />
+
+                        <div id="divMensagemErro" style="display:none" class="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h4><i class="icon fa fa-check"></i> Aviso!</h4>
+
+                            <span id="msgErroSucesso"></span>
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="CODPES">Empresa/Filial</label>
+                                    <select class="form-control select2" style="width: 100%;" name="CODPES" id="CODPES">
+                                        <option value="0" selected>Empresa/Filial</option>
+                                        @foreach (var item in Model.Clientes)
+                                        {
+                                            <option value="@item.Codigo">@item.Nome</option>
+                                        }
+                                    </select>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Código</label>
+                                    <input type="hidden" class="form-control" id="Codigo" name="Codigo">
+                                    <input type="hidden" class="form-control" id="Id" name="Id">
+                                    <input type="text" class="form-control" id="Sequencia" name="Sequencia" placeholder="" disabled="disabled">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="Data">Data da Venda</label>
+                                    <input type="text" class="form-control" id="Data" name="Data" placeholder="Data">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="caixa_n">Caixa Numero</label>
+                                    <input type="number" class="form-control cnpj" id="caixa_n" name="caixa_n" placeholder="Numero" maxlength="18">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">CMV Peça</label>
+                                    <input type="number" class="form-control" id="cmv_peca" name="cmv_peca" placeholder="R$ 1000,00">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">CMV Pneu</label>
+                                    <input type="number" class="form-control" name="cmv_pneu" id="cmv_pneu" placeholder="R$ 1000,00">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Serviço Terceiro</label>
+                                    <input type="number" class="form-control" name="servico_terceiro" id="servico_terceiro" placeholder="R$ 1000,00">
+                                </div>
+                            </div>
+                       
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Faturamento Peça</label>
+                                    <input type="number" class="form-control" name="faturamento_peca" id="faturamento_peca" placeholder="R$ 1000,00">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Faturamento Pneu</label>
+                                    <input type="number" class="form-control" name="faturamento_pneu" id="faturamento_pneu" placeholder="R$ 1000,00">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Faturamento Mão de Obra</label>
+                                    <input type="number" class="form-control" name="faturamento_maoobra" id="faturamento_maoobra" placeholder="R$ 1000,00">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">QTD de Veículo</label>
+                                    <input type="number" class="form-control" name="qtd_veiculo" id="qtd_veiculo" placeholder="10">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="button" class="btn btn-primary" onclick="gravar(); return false;">Gravar</button>
+                    </div>
+                </form>
+
+
+
+            </div>
+            <!-- /.box -->
+
+        </div>
+
+
+    </div>
+    <!-- /.row -->
+
+
+    <div class="box collapse" id="grdBusca">
+
+    </div>
+
+
+
+</section>

@@ -1,0 +1,65 @@
+﻿@using MODELS
+
+@{
+    ViewBag.Title = "Imprimir";
+    Layout = "~/Views/Shared/_LayoutImpressao.cshtml";
+}
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>       
+        <tr>
+            <td width="10">&nbsp;</td>
+            <td width="500">
+                <table class="tablebranca" width="100%" border="0" cellspacing="0" cellpadding="0"
+                       style="border-collapse: collapse; background-color: #FFFFFF; padding-left: 10px;">
+                    <tbody>
+                        <tr height="100">
+                            <td align="center">
+                                <label><font face="verdana" size="3">RELATÓRIO DE CLIENTES</font><font face="verdana" size="1">@Html.Raw(Model.FiltrosUtilizados)</font></label> 
+                            </td>                            
+                        </tr>
+                    </tbody>
+                </table>
+            
+                              
+            </td>
+            <td width="10">&nbsp;</td>
+        </tr>
+        <tr>
+            <td width="10">&nbsp;</td>
+            <td width="500">
+                <table width="100%" border="1" cellspacing="0" cellpadding="0"  style="border-collapse: collapse; background-color: #fff;">
+                    <thead style="background-color: #FFFFFF; color: #fff;" class="theadcolor">
+                        <tr height="30">
+                            <th style="text-align: center;color: #000"><font face="verdana" size="1">#</font></th>
+                            <th style="text-align: left;color: #000"><font face="verdana" size="1">NOME</font></th>
+                            <th style="color: #000"><font face="verdana" size="1">E-MAIL</font></th>
+                            <th style="text-align: center;color: #000"><font face="verdana" size="1">CNPJ/CPF</font></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      
+                        @if (Model != null && Model.Pessoa != null)
+                        {
+                            foreach (var item in Model.Pessoa)
+                            { 
+                                <tr>
+                                    <td style="text-align: center;color: #000"><font face="verdana" size="1">@item.Codigo</font></td>
+                                    <td style="text-align: left;color: #000"><font face="verdana" size="1">&nbsp;@item.Nome</font></td>
+                                    <td style="color: #000"><font face="verdana" size="1">@item.Email</font></td>
+                                    <td style="text-align: center;color: #000"><font face="verdana" size="1">@item.CpfCnpj</font></td>
+                                </tr>
+                            }
+                        }
+                     
+                    </tbody>
+                </table>
+            </td>
+            <td width="10">&nbsp;</td>
+        </tr>
+     
+        
+    </tbody>
+</table>
+

@@ -1,0 +1,365 @@
+﻿
+@{
+    ViewBag.Title = "Detahado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/Sistema/relatoriogerencial.js"></script>
+<script src="~/Scripts/jquery.mask.js"></script>
+
+
+<section class="content-header">
+    <h1>
+        Relatório Gerencial - Detalhado
+    </h1>
+
+</section>
+
+
+
+
+<section class="content">
+
+
+
+    <div class="row">
+
+
+
+        <!-- left column -->
+        <div class="col-md-12">
+
+
+
+            <!-- general form elements -->
+            <div class="box box-primary">
+
+
+
+                <form role="form" id="frmRelatorioGerencial">
+
+
+                    <div class="box-body">
+
+
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">Pesquisar</button>
+                        <button type="button" class="btn btn-primary" onclick="imprimir('grdBusca'); return false;">Imprimir</button>                        
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-email">Enviar E-mail</button>
+
+                        <div class="modal fade" id="modal-default">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Parâmetros da Pesquisa</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Empresa</label>
+                                                    <select class="form-control" style="width: 100%;" name="BuscaMatrizFilial" id="BuscaMatrizFilial">
+                                                        <option value="0" selected>Empresa...</option>
+                                                        @foreach (var item in Model.Empresas)
+                                                        {
+                                                            <option value="@item.Codigo">@item.Nome</option>
+                                                        }
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Favorecido</label>
+                                                            <input type="text" class="form-control" id="BuscaFavorecido" name="BuscaFavorecido" placeholder="Favorecido">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Assessoria</label>
+                                                            <input type="text" class="form-control" id="BuscaAssessoria" name="BuscaAssessoria" placeholder="Assessoria">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Ação/Processo</label>
+                                                            <input type="text" class="form-control" id="BuscaProcesso" name="BuscaProcesso" placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Pago</label>
+                                                            <input type="text" class="form-control" id="BuscaPagoSimNao" name="BuscaPagoSimNao" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label>Data de Vencimento De</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="BuscaDataVencimentoDe" name="BuscaDataVencimentoDe" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label>Data de Vencimento Até</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="BuscaDataVencimentoAte" name="BuscaDataVencimentoAte" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label>Data de Pagto De</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="BuscaDataPagamentoDe" name="BuscaDataPagamentoDe" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label>Data de Pagto Até</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="BuscaDataPagamentoAte" name="BuscaDataPagamentoAte" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+
+                                                <label>Tipo de Ação</label>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="BuscaAcaoTipo" name="BuscaAcaoTipo" placeholder="" maxlength="50">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                                        <button type="submit" class="btn btn-primary collapsed" data-dismiss="modal" data-toggle="collapse" onclick="buscarDetalhado(); return false;"> Buscar </button>
+                                        <button type="submit" class="btn btn-success collapsed" data-dismiss="modal" data-toggle="collapse" onclick="buscarDetalhadoII(); return false;"> Buscar II</button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        <!-- /.modal -->
+                        <!-- /.modal email-->
+
+                        <div class="modal fade" id="modal-email">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Enviar e-mail</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Para</label>
+                                                            <input type="text" class="form-control" id="EmailPara" name="EmailPara" placeholder="Para">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Assunto</label>
+                                                            <input type="text" class="form-control" id="EmailAssunto" name="EmailAssunto" placeholder="Assunto">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                                        <button type="submit" class="btn btn-primary collapsed" data-dismiss="modal" data-toggle="collapse" onclick="EnviarEmailRelacao(EmailPara.value, EmailAssunto.value,'#divResultadoBusca'); return false;"> Enviar </button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+                        <!-- /.modal CP-->
+                        <div class="modal modal-cp fade in" id="modal-cp">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Gerar contas a Pagar - Assessoria</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+
+                                        <!--furm-->
+
+                                        <div class="row">
+
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">De</label>
+                                                    <input type="text" class="form-control" id="ParcelaDeContasPagar" name="ParcelaDeContasPagar" placeholder="" maxlength="2">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Até</label>
+                                                    <input type="text" class="form-control" id="ParcelaAteContasPagar" name="ParcelaAteContasPagar" placeholder="" maxlength="2">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Valor</label>
+                                                    <input type="text" class="form-control" id="ValorContasPagar" name="ValorContasPagar" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Vencimento</label>
+                                                    <input type="text" class="form-control" id="VencimentoContasPagar" name="VencimentoContasPagar" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-10">
+                                                <label>Favorecido</label>
+                                                <select class="form-control select2" style="width: 100%;" name="Favorecido" id="Favorecido">
+                                                    <option value="0" selected>Favorecido</option>
+                                                    @*@foreach (var item in Model.Requerentes)
+                                                        {
+                                                            <option value="@item.Codigo" @(item.Codigo == Model.Requerente ? "selected" : "")>@item.Nome</option>
+                                                        }*@
+                                                </select>
+                                            </div>
+
+
+                                        </div>
+
+                                        <!--fim frm-->
+
+
+                                        <div id="divMensagemErroModal" style="display:none" class="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                            <h4><i class="icon fa fa-check"></i> Aviso!</h4>
+
+                                            <span id="msgErroSucessoModal"></span>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-default collapsed" data-dismiss="modal" data-toggle="collapse" onclick="gravarcp(); return false;"> Gerar Contas </button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        <!-- /.modal -->
+
+                        <br /><br />
+
+
+                        <div id="divMensagemErro" style="display:none" class="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h4><i class="icon fa fa-check"></i> Aviso!</h4>
+
+                            <span id="msgErroSucesso"></span>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <!-- /.box-body -->
+
+                </form>
+
+
+
+            </div>
+            <!-- /.box -->
+
+        </div>
+
+
+    </div>
+    <!-- /.row -->
+
+
+    <div class="box collapse" id="grdBusca">
+
+    </div>
+
+
+
+</section>
+
+

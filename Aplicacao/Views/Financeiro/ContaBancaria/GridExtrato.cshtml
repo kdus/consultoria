@@ -1,0 +1,54 @@
+﻿<br />
+<div class="box-body table-responsive no-padding">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th>Data</th>
+                <th>Favorecido</th>
+                <th>Histórico</th>
+                <th align="right">Valor</th>
+            </tr>
+            
+            @if (Model != null && Model.Extratos != null)
+            {
+                double vValor = 0;
+
+                foreach (var item in Model.Extratos)
+                {
+                    <tr>
+
+                        @if (item.Valor < 0)
+                        {
+                            <td class="text-red">@string.Format("{0:dd/MM/yyyy}", item.Data)</td>
+                            <td class="text-red">@item.Favorecido</td>
+                            <td class="text-red">@item.Historico</td>
+                            <td align="right" class="text-red">@string.Format("{0:n2}", Convert.ToDouble(item.Valor))</td>
+                        }
+                        else
+                        {
+                            <td class="text-light-blue">@string.Format("{0:dd/MM/yyyy}", item.Data)</td>
+                            <td class="text-light-blue">@item.Favorecido</td>
+                            <td class="text-light-blue">@item.Historico</td>
+                            <td align="right" class="text-light-blue">@string.Format("{0:n2}", Convert.ToDouble(item.Valor))</td>
+                        }
+
+
+                    </tr>
+
+                    vValor += Convert.ToDouble(item.Valor);
+                }
+
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td><b>SALDO</b></td>
+                    <td align="right"><b>@string.Format("{0:n2}", Convert.ToDouble(vValor))</b></td>
+                </tr>
+
+            }          
+
+        </tbody>
+    </table>
+</div>
+
+

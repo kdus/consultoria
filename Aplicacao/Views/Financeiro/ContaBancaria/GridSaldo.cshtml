@@ -1,0 +1,26 @@
+﻿<br />
+<div class="box-body table-responsive no-padding">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>                
+                <th>De</th>
+                <th>Até</th>
+                <th align="right">Valor</th>
+            </tr>
+
+            @if (Model != null && Model.Saldos != null)
+            {
+                foreach (var item in Model.Saldos)
+                {
+                    <tr>                        
+                        <td>@item.DataInicial</td>
+                        <td>@item.DataFinal</td>
+                        <td align="right">@string.Format("{0:n2}", Convert.ToDouble(item.Valor))</td> 
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>
+

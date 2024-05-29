@@ -1,0 +1,353 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="~/Scripts/Sistema/pessoa.js"></script>
+<script src="~/Scripts/jquery.mask.js"></script>
+
+<section class="content-header">
+    <h1>
+        Cliente
+    </h1>
+
+</section>
+
+
+
+
+<section class="content">
+
+
+
+    <div class="row">
+
+
+
+        <!-- left column -->
+        <div class="col-md-12">
+
+
+
+            <!-- general form elements -->
+            <div class="box box-primary">
+
+
+
+                <form role="form" id="frmPessoa">
+
+
+                    <div class="box-body">
+
+                        <button type="button" class="btn btn-pinterest" onclick="novo(); return false;">Novo</button>
+                        <button type="button" class="btn btn-primary" onclick="gravar(); return false;">Gravar</button>
+                        <button type="button" class="btn btn-warning" onclick="excluir(); return false;">Excluir</button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-pesquisa">Pesquisar</button>
+                        <button type="button" class="btn btn-warning" onclick="imprimir(); return false;">Imprimir</button>
+                        <button type="button" class="btn btn-primary" onclick="buscarusuario(); return false;" data-toggle="modal" data-target="#modal-pesquisausuario">Usuário</button>
+
+                        <div class="modal fade" id="modal-pesquisa">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Parâmetros da Pesquisa</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label for="exampleInputEmail1">Nome/Razão Social</label>
+                                                        <input type="text" class="form-control" id="BuscaNome" name="BuscaNome" placeholder="Nome">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label for="exampleInputEmail1">
+                                                        </label>
+                                                        <input type="text" class="form-control" id="BuscaCpf" name="BuscaCpf" placeholder="Cpf">
+                                                    </div>
+                                                </div>
+
+
+
+
+                                                <div class="row">
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                                        <button type="submit" class="btn btn-primary collapsed" data-dismiss="modal" data-toggle="collapse" onclick="buscar(); return false;"> Buscar </button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        <!-- /.modal -->
+
+
+
+
+                        <br /><br />
+
+                        <div id="divMensagemErro" style="display:none" class="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h4><i class="icon fa fa-check"></i> Aviso!</h4>
+
+                            <span id="msgErroSucesso"></span>
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Código</label>
+                                    <input type="text" class="form-control" id="Codigo" name="Codigo" disabled="disabled">
+                                    @*<input type="text" class="form-control" id="Sequencia" name="Sequencia" placeholder="" disabled="disabled">*@
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nome/Razão Social</label>
+                                    <input type="text" class="form-control" id="Nome" name="Nome" placeholder="Nome">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="CPF/CNPJ">CPF/CNPJ</label>
+                                    <input type="text" class="form-control cnpj" id="CpfCnpj" name="CpfCnpj" placeholder="CPF/CNPJ" maxlength="18">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Telefone">Telefone</label>
+                                    <input type="text" class="form-control" name="Telefone" id="Telefone">
+                                    @*<a href="https://api.whatsapp.com/send?phone=5511998282785&amp;text=Por favor, entrar em contato." class="fa-whatsapp" tabindex="0"></a>*@
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">E-mail</label>
+                                    <input type="text" class="form-control" name="Email" id="Email">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-3 col-3">
+                                @*<div class="col-md-3">*@
+                                <div class="color-palette-set">
+                                    <div class="bg-primary color-palette">
+                                        <h3>Receita</h3>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Peça">Peça</label>
+                                    <input type="text" class="form-control" name="RECEITAPECA" id="RECEITAPECA" onblur="calcular()">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Servico">Servico</label>
+                                    <input type="text" class="form-control" name="RECEITASERVICO" id="RECEITASERVICO" onblur="calcular()">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Pneu">Pneu</label>
+                                    <input type="text" class="form-control" name="RECEITAPNEU" id="RECEITAPNEU" onblur="calcular()">
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="Total de Faturamento">Total de Faturamento</label>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" name="TOTALFATPECA" id="TOTALFATPECA" disabled="disabled">
+
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="Total de Receita">Total de Receita</label>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" name="TOTALRECEITA" id="TOTALRECEITA" disabled="disabled">
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                                <div class="col-lg-3 col-3">
+                                    @*<div class="col-md-1">*@
+                                    <div class="color-palette-set">
+                                        <div class="bg-danger color-palette">
+                                            <h3>% Sob Receita</h3>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Peça</label>
+                                        <input type="text" class="form-control" name="PORCENTAGEMPECA" id="PORCENTAGEMPECA">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Servico</label>
+                                        <input type="text" class="form-control" name="PORCENTAGEMPSERVICO" id="PORCENTAGEMPSERVICO">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Pneu</label>
+                                        <input type="text" class="form-control" name="PORCENTAGEMPNEU" id="PORCENTAGEMPNEU">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-3">
+                                    @*<div class="col-md-3">*@
+                                    <div class="color-palette-set">
+                                        <div class="bg-success color-palette">
+                                            <h3>Custo Variável</h3>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Peça</label>
+                                        <input type="text" class="form-control" name="CUSTOVARIAVELPECA" id="CUSTOVARIAVELPECA">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Pneu</label>
+                                        <input type="text" class="form-control" name="CUSTOVARIAVELPNEU" id="CUSTOVARIAVELPNEU">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-3">
+                                    @*<div class="col-md-3">*@
+                                    <div class="color-palette-set">
+                                        <div class="bg-warning color-palette">
+                                            <h3>Índice</h3>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Numero de vendas</label>
+                                        <input type="text" class="form-control" name="INDICEVENDAS" id="INDICEVENDAS">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Ticket Médio</label>
+                                        <input type="text" class="form-control" name="INDICETICKETMEDIO" id="INDICETICKETMEDIO">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="button" class="btn btn-primary" onclick="gravar(); return false;">Gravar</button>
+                    </div>
+
+
+                </form>
+
+
+
+            </div>
+            <!-- /.box -->
+
+        </div>
+
+
+    </div>
+    <!-- /.row -->
+
+
+    <div class="box collapse" id="grdBusca">
+
+    </div>
+
+   
+</section>
+
+<form id="frmUsuario">
+<div class="modal fade" id="modal-pesquisausuario">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Cadastro de Usuário</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+
+                            <label for="CODUSU">Usuários</label>
+                            <select class="form-control select2" style="width: 100%;" name="Usuario" id="Usuario">
+                                <option selected>Usuários</option>
+                                @foreach (var item in Model.Usuarios)
+                                {
+                                    <option value="@item.Codigo">@item.Nome</option>
+                                }
+                            </select>
+                       
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary collapsed" data-dismiss="modal" data-toggle="collapse" onclick="Gravarusuario(); return false;"> Adcionar Usuário </button>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="box collapse"
+                         id="grdusuarios">
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+</form>

@@ -1,0 +1,630 @@
+﻿@using MODELS;
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="~/Scripts/Sistema/contasreceber.js"></script>
+<script src="~/Scripts/jquery.mask.js"></script>
+
+
+<section class="content-header">
+    <h1>
+        Contas a Receber
+    </h1>
+
+</section>
+
+<section class="content">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box box-success">
+
+                <form role="form" id="frmContasReceber">
+
+                    <div class="box-body">                        
+
+                            <button type="button" class="btn btn-info" onclick="novo(); return false;">Novo</button>
+                            <button type="button" class="btn btn-success" onclick="gravar(); return false;">Gravar</button>
+                            <button type="button" class="btn btn-pinterest" data-toggle="modal" data-target="#modal-excluir">Excluir</button>
+                           
+                            @*<button type="button" class="btn btn-warning" onclick="imprimir('grdBusca'); return false;">Imprimir</button>*@                            
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-warning">Imprimir</button>
+                                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><button type="button" class="btn btn-info" onclick="imprimir('grdBusca'); return false;">Imprimir</button></li>
+                                    -
+                                    <li><button type="button" class="btn btn-warning" onclick="ImprimirReceita(); return false;">Receita por Tipo de Ação</button></li>
+                                </ul>
+                            </div>
+
+
+
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-Pesquisa">Pesquisar</button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info">Pesquisar</button>
+                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#" data-toggle="modal" data-target="#modal-default">Uso Interno</a></li>
+                                    <li><a href="#" data-toggle="modal" data-target="#modal-default">Envio Assessoria</a></li>
+                                    
+                                </ul>
+                            </div>
+                          
+                          
+                         
+                     
+                      
+                        <!-- /.modal PESQUISA-->
+                        <div class="modal fade" id="modal-Pesquisa">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Parâmetros da Pesquisa</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Empresa/Pessoa</label>
+                                                            <select class="form-control" style="width: 100%;" name="BuscaMatrizFilial" id="BuscaMatrizFilial">
+                                                                <option value="0" selected>Empresa/Pessoa...</option>
+                                                                @foreach (var item in Model.Empresas)
+                                                                {
+                                                                    <option value="@item.Codigo">@item.Nome</option>
+                                                                }
+                                                            </select>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Cliente</label>
+                                                            <input type="text" class="form-control" id="BuscaCliente" name="BuscaCliente" placeholder="Cliente">
+                                                        </div>
+                                                    </div>
+                                               
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Descrição</label>
+                                                            <input type="text" class="form-control" id="BuscaDescricao" name="BuscaDescricao" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Assessoria</label>
+                                                            <input type="text" class="form-control" id="BuscaAssessoria" name="BuscaAssessoria" placeholder="Assessoria">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Ação/Processo</label>
+                                                            <input type="text" class="form-control" id="BuscaProcesso" name="BuscaProcesso" placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Conta Bancária</label>
+                                                            <input type="text" class="form-control" id="BuscaContaBancaria" name="BuscaContaBancaria" placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-2">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Não Ação</label>
+                                                            <input type="text" class="form-control" id="BuscaNegarAcaoProcesso" name="BuscaNegarAcaoProcesso" placeholder="">
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+
+
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label>Data de Vencimento De</label>
+                                                        @*<div class="form-group">
+                                                            <input type="text" class="form-control" id="BuscaDataVencimentoDe" name="BuscaDataVencimentoDe" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)">
+                                                        </div>*@
+                                                        <div class="input-group date">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control pull-right" id="BuscaDataVencimentoDe" name="BuscaDataVencimentoDe" data-date-format="dd/mm/yyyy"  autocomplete="off">
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label>Data de Vencimento Até</label>
+                                                        @*<div class="form-group">
+                                                            <input type="text" class="form-control" id="BuscaDataVencimentoAte" name="BuscaDataVencimentoAte" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)">
+                                                        </div>*@
+                                                        <div class="input-group date">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control pull-right" id="BuscaDataVencimentoAte" name="BuscaDataVencimentoAte" data-date-format="dd/mm/yyyy"  autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label>Data de Recebimento De</label>
+                                                        @*<div class="form-group">
+                                                            <input type="text" class="form-control" id="BuscaDataPagamentoDe" name="BuscaDataPagamentoDe" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)">
+                                                        </div>*@
+                                                        <div class="input-group date">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control pull-right" id="BuscaDataPagamentoDe" name="BuscaDataPagamentoDe" data-date-format="dd/mm/yyyy"  autocomplete="off">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label>Data de Recebimento Até</label>
+                                                        @*<div class="form-group">
+                                                            <input type="text" class="form-control" id="BuscaDataPagamentoAte" name="BuscaDataPagamentoAte" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)">
+                                                        </div>*@
+                                                        <div class="input-group date">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control pull-right" id="BuscaDataPagamentoAte" name="BuscaDataPagamentoAte" data-date-format="dd/mm/yyyy"  autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+
+                                                    <div class="col-md-6">
+
+                                                        <label>Tipo de Ação</label>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="BuscaAcaoTipo" name="BuscaAcaoTipo" placeholder="" maxlength="50">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Pago</label>
+                                                            <input type="text" class="form-control" id="BuscaPagoSimNao" name="BuscaPagoSimNao" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Principal</label>
+                                                            <input type="text" class="form-control" id="BuscaPrincipal" name="BuscaPrincipal" placeholder="">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                                        <button type="submit" class="btn btn-primary collapsed" data-dismiss="modal" data-toggle="collapse" onclick="buscar(); return false;"> Buscar </button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        
+                        <!-- /.modal EXCLUIR-->
+                        <div class="modal fade" id="modal-excluir">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Exclusão de registro</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        Deseja realmente excluir?
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Não</button>
+                                        <button type="submit" class="btn btn-primary collapsed" data-dismiss="modal" data-toggle="collapse" onclick="excluir(); return false;">Sim</button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+
+
+                        <br /><br />
+
+
+                        <div id="divMensagemErro" style="display:none" class="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h4><i class="icon fa fa-check"></i> Aviso!</h4>
+
+                            <span id="msgErroSucesso"></span>
+                        </div>
+                        
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Empresa/Pessoa</label>
+                                    <select class="form-control select2" style="width: 100%;" name="MatrizFilial" id="MatrizFilial">
+                                        <option value="0" selected>Empresa/Pessoa...</option>
+                                        @foreach (var item in Model.Empresas)
+                                        {
+                                            <option value="@item.Codigo" @(item.Codigo == Model.MatrizFilial ? "selected" : "")>@item.Nome</option>
+                                        }
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Código</label>
+                                    <input type="text" class="form-control" id="Codigo" name="Codigo" placeholder="" value="@Model.Codigo" disabled="disabled">
+                                    <input type="hidden" class="form-control" id="Sequencia" name="Sequencia" placeholder="" disabled="disabled" value="@Model.Sequencia" >
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-9">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Cliente</label>
+                                    <select class="form-control select2" style="width: 100%;" name="Cliente" id="Cliente">
+                                        <option value="0" selected>Cliente...</option>
+                                        @if (Model.Pessoa != null)
+                                        {
+                                            foreach (var item in Model.Pessoa)
+                                            {
+                                                 <option value="@item.Codigo" @(item.Codigo == Model.Cliente ? "selected" : "") >@item.Nome</option>
+                                            }
+                                        }
+                                    </select>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">De</label>
+                                    <input type="text" class="form-control" placeholder="" id="ParcelaX" name="ParcelaX" value="@Model.ParcelaX">
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Até</label>
+                                    <input type="text" class="form-control" placeholder="" id="ParcelaY" name="ParcelaY" value="@Model.ParcelaY">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--INICIO DESCRICAO  PAGO E FIXA-->
+                        <div class="row">
+
+                            <div class="col-md-10">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Descrição</label>
+                                    <input type="text" class="form-control" id="Descricao" name="Descricao" placeholder="" value="@Model.Descricao">
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Pago</label>
+                                    <input type="text" class="form-control" id="Pago" name="Pago" placeholder="" value="@Model.Pago">
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fixa?</label>
+                                    <input type="text" class="form-control" id="Fixa" name="Fixa" placeholder="" value="@Model.Fixa">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--FIM DESCRICAO  PAGO E FIXA-->
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Grupo de Cobrança</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Gentro de Custo</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Conta Contábil</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            @*<div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Condição de Pagamento</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>*@
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Tipo</label>
+                                    <select class="form-control" style="width: 100%;" name="TipoRecebimentoPagamentoRec" id="TipoRecebimentoPagamentoRec">
+                                        <option value="0" selected>Tipo...</option>
+                                        @foreach (var item in Model.TiposRecebimentoPagamento)
+                                        {
+                                            <option value="@item.Codigo">@item.Nome</option>
+                                        }
+                                    </select>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Principal</label>
+                                    <input type="text" class="form-control" id="Principal" name="Principal" placeholder="" value="@Model.Principal">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--INICIO DATAS E VALORES-->
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Data de Vencimento</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="Vencimento" name="Vencimento" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)"  autocomplete="off" value="@(Model.Vencimento != null ? string.Format("{0:dd/MM/yyyy}", Model.Vencimento) : "")">
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>Data de Recebimento</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="DataPagamento" name="DataPagamento" placeholder="" maxlength="10" onkeypress="mascaraData(this,event)"  autocomplete="off" value="@(Model.DataPagamento != null ? string.Format("{0:dd/MM/yyyy}", Model.DataPagamento) : "")">
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Valor a Receber</label>
+                                    <input type="text" class="form-control" id="Valor" name="Valor" placeholder="" value="@(Model.Valor != null ? string.Format("{0:n2}", Model.Valor) : "0,00")">
+                                </div>
+
+                            </div>
+                            <div class="col-md-2">
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Desconto</label>
+                                    <input type="text" class="form-control" id="Desconto" name="Desconto" placeholder="" value="@(Model.Desconto != null ? string.Format("{0:n2}", Model.Desconto) : "") ">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Juros</label>
+                                    <input type="text" class="form-control" id="Juros" name="Juros" placeholder="" value="@(Model.Juros != null ? string.Format("{0:n2}", Model.Juros) : "")">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Valor Recebido</label>
+                                    <input type="text" class="form-control" id="ValorPago" name="ValorPago" placeholder="" value="@(Model.ValorPago != null  ? string.Format("{0:n2}", Model.ValorPago) : "")">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!--FIM DATAS E VALORES-->
+                        <!--INICIO FORMA CONTA BANCARIA MES E ANO REF-->
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Forma de Recebimento</label>
+                                    <select class="form-control select2" style="width: 100%;" name="FormaPagamentoRecebimento" id="FormaPagamentoRecebimento">
+                                        <option value="0" selected>Forma...</option>
+                                        @foreach (var item in Model.Formas)
+                                        {
+                                            <option value="@item.Codigo" @(item.Codigo == Model.FormaPagamentoRecebimento ? "selected" : "")>@item.Nome</option>
+                                        }
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Conta Bancária</label>
+                                    <select class="form-control select2" style="width: 100%;" name="ContaBancaria" id="ContaBancaria">
+                                        <option value="0" selected>Conta...</option>
+                                        @foreach (var item in Model.ContasBancaria)
+                                        {
+                                            <option value="@item.Codigo" @(item.Codigo == Model.ContaBancaria ? "selected" : "")>@item.Nome</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label>Mês Ref.</label>
+                                    <select class="form-control select2" style="width: 100%;" name="MesReferencia" id="MesReferencia">
+                                        <option value="0" selected>Mês...</option>
+                                        @foreach (var item in Model.Meses)
+                                        {
+                                            <option value="@item.Codigo" @(item.Codigo == Model.MesReferencia ? "selected" : "")>@item.Nome</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label>Ano Ref.</label>
+                                    <select class="form-control select2" style="width: 100%;" name="AnoReferencia" id="AnoReferencia">
+                                        <option value="0" selected>Ano...</option>
+                                        @foreach (var item in Model.Ano)
+                                        {
+                                            <option value="@item.Codigo" @(item.Codigo == Model.AnoReferencia ? "selected" : "")>@item.Nome</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <!--FIOM FORMA CONTA BANCARIA MES E ANO REF-->
+                        <!--INICIO OBSERVACAO-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+
+                                    <label>Observação</label>
+                                    <textarea name="Observacao" id="Observacao" class="form-control" rows="3" placeholder="Digite um texto ...">@Model.Observacao</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!--FIM OBSERVACAO-->
+
+                        <!--INICIO ORIGENS-->
+                        <div class="row">
+
+                            <div class="col-md-10">
+                                <div class="form-group">
+                                    <label>Origem</label>
+                                    <select class="form-control select2" style="width: 100%;" name="OrigemCadastro" id="OrigemCadastro">
+                                        <option value="0" selected>Origem...</option>
+                                        @foreach (var item in Model.Origens)
+                                        {
+                                            <option value="@item.Codigo" @(item.Codigo == Model.OrigemCadastro ? "selected" : "")>@item.Nome</option>
+                                        }
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+
+                                    <label for="exampleInputEmail1">Cód. Origem</label>
+                                    <input type="hidden" class="form-control" name="CodigoOrigem"           id="CodigoOrigem" placeholder="" value="@Model.CodigoOrigem" >
+                                    <input type="text" class="form-control"   name="CodigoOrigemSequencial" id="CodigoOrigemSequencial" placeholder="" value="@Model.CodigoOrigemSequencial">
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--FIM ORIGENS-->
+
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary"  onclick="gravar(); return false;">Gravar</button>
+                    </div>
+                </form>
+
+
+
+            </div>
+            <!-- /.box -->
+
+        </div>
+
+
+    </div>
+    <div class="box collapse" id="grdBusca">
+
+    </div>
+
+
+    <!-- /.row -->
+</section>
+

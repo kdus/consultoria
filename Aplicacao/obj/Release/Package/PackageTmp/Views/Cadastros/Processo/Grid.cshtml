@@ -1,0 +1,118 @@
+﻿@using BLL;
+@using BEAN;
+
+<div class="box-header with-border">
+    <h3 class="box-title">Resultado da Busca</h3>
+</div>
+<!-- /.box-header -->
+<div class="box-body table-responsive no-padding">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th style="width: 10px"><input type="checkbox" name="SelecionarTodos" onclick='selecionarTodos();' /></th>
+                <th style="width: 10px">#</th>
+                <th>Numeração</th>
+                <th>Data</th>
+                <th>Requerente</th>
+                <th>Assessoria</th>
+                <th>Tipo</th>
+            </tr>
+
+            @if (Model != null && Model.Acao != null)
+            {
+                double vQtde = 0;
+                int i = 0;
+                foreach (var item in Model.Acao)
+                {
+                    <tr class="cpointer">
+                        <td><input type="checkbox" name="Codigo_@i" value="@item.Codigo" /></td>
+                        <td class="cpointer" onclick="detalhar(@item.Codigo);"><a href="#">@item.Codigo</a></td>
+                        <td class="cpointer" onclick="detalhar(@item.Codigo);"><a href="#">@item.Numeracao</a></td>
+                        <td class="cpointer" onclick="detalhar(@item.Codigo);"><a href="#">@(item.Data == null ? "" : String.Format("{0:dd/MM/yyyy}", Convert.ToDateTime(item.Data)))</a></td>
+                        <td class="cpointer" onclick="detalhar(@item.Codigo);"><a href="#">@item.RequerenteNome</a></td>
+                        <td class="cpointer" onclick="detalhar(@item.Codigo);"><a href="#">@item.AssessoriaNome</a></td>
+                        <td class="cpointer" onclick="detalhar(@item.Codigo);"><a href="#">@item.TipoDescricao</a></td>
+                    </tr>
+
+                    vQtde++;
+                    i++;
+                }
+
+                <tr>
+                    <td></td>
+                    <td>@vQtde.ToString("0")<input type="hidden" id="QtdeFiltrado" name="QtdeFiltrado" value="@i" /></td>                   
+                    @if ((((UsuarioBEAN)HttpContext.Current.Session["session_Usuario"]).Nivel).Equals("S"))
+                    {
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-enviarRelacao">Enviar Relação</button></td>
+                    }
+                    else
+                    {
+                        <td>Selecionado(s)</td>
+                    }
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+  <!-- /.modal CR-->
+<!-- Modal Enviar Relacao-->
+<div class="modal fade" id="modal-enviarRelacao">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Você está prestes a enviar a relação selecionada para a Assessoria</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <form role="form" id="frmProcessoGrid">
+                            <div class="row">
+
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Assessoria</label>
+                                        <select class="form-control" style="width: 100%;" name="AssessoriaParaConfirmar" id="AssessoriaParaConfirmar">
+                                            <option value="0" selected>Assessoria...</option>
+                                            @foreach (var item in Model.AssessoriasParaConfirmar)
+                                            {
+                                                <option value="@item.Codigo">@item.Nome</option>
+                                            }
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    Deseja realmente enviar?
+                                </div>
+
+
+                            </div>
+
+</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Não</button>
+                <button type="submit" class="btn btn-success collapsed" data-dismiss="modal" data-toggle="collapse" onclick="EnviarRelacao(); return false;">Sim</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- Modal Enviar Relacao Fim -->

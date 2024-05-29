@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+    <script src="~/Scripts/Sistema/venda.js"></script>
+    <script src="~/Scripts/jquery.mask.js"></script>
+
+    <section class="content-header">
+        <h1>
+            Contas
+        </h1>
+
+    </section>
+
+    <section class="content">
+
+
+
+        <div class="row">
+
+
+
+            <!-- left column -->
+            <div class="col-md-12">
+
+
+
+                <!-- general form elements -->
+                <div class="box box-primary">
+
+
+                    <form role="form" id="frmVenda">
+
+
+                        <div class="box-body">
+
+                            
+                            <button type="button" class="btn btn-primary" onclick="gravar(); return false;">Gravar</button>
+
+                            <br />
+
+                            <div id="divMensagemErro" style="display:none" class="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                <h4><i class="icon fa fa-check"></i> Aviso!</h4>
+
+                                <span id="msgErroSucesso"></span>
+                            </div>                           
+
+
+                            <div id="dgvGrid" style="display:none;">
+
+                            </div>
+
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                            <button type="button" class="btn btn-primary" onclick="gravar(); return false;">Gravar</button>
+                        </div>
+                    </form>
+
+
+
+                </div>
+                <!-- /.box -->
+
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+
+
+

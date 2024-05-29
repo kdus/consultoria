@@ -1,0 +1,60 @@
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Release\BLL.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Release\BLL.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Release\BEAN.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Release\DAO.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Release\VIEWMODEL.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Release\MySql.Data.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Release\Dapper.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Release\BEAN.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Release\DAO.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Release\VIEWMODEL.pdb
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\bin\Release\Dapper.xml
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\obj\Release\BLL.dll
+C:\Docs\Anderson\Sistemas\SisEaj\BLL\obj\Release\BLL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Release\BLL.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Release\BLL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Release\BEAN.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Release\DAO.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Release\VIEWMODEL.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Release\MySql.Data.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Release\Dapper.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Release\BEAN.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Release\DAO.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Release\VIEWMODEL.pdb
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\bin\Release\Dapper.xml
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\obj\Release\BLL.csproj.AssemblyReference.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\obj\Release\BLL.csproj.CoreCompileInputs.cache
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\obj\Release\BLL.csproj.Up2Date
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\obj\Release\BLL.dll
+D:\Backup Carlos\Pessoais\BKP\CMproject\Sistema_Son\SisCarloTete\BLL\obj\Release\BLL.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Release\BLL.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Release\BLL.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Release\BEAN.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Release\DAO.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Release\VIEWMODEL.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Release\MySql.Data.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Release\Dapper.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Release\BEAN.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Release\DAO.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Release\VIEWMODEL.pdb
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\bin\Release\Dapper.xml
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\obj\Release\BLL.dll
+D:\DOCS\ClientesEmpresa\CmProject-Carlao\SisCarloTete\SisCarloTete\BLL\obj\Release\BLL.pdb
+D:\SisCarloTete2\BLL\bin\Release\BLL.dll
+D:\SisCarloTete2\BLL\bin\Release\BLL.pdb
+D:\SisCarloTete2\BLL\bin\Release\BEAN.dll
+D:\SisCarloTete2\BLL\bin\Release\DAO.dll
+D:\SisCarloTete2\BLL\bin\Release\VIEWMODEL.dll
+D:\SisCarloTete2\BLL\bin\Release\MySql.Data.dll
+D:\SisCarloTete2\BLL\bin\Release\Dapper.dll
+D:\SisCarloTete2\BLL\bin\Release\BEAN.pdb
+D:\SisCarloTete2\BLL\bin\Release\DAO.pdb
+D:\SisCarloTete2\BLL\bin\Release\VIEWMODEL.pdb
+D:\SisCarloTete2\BLL\bin\Release\Dapper.xml
+D:\SisCarloTete2\BLL\obj\Release\BLL.csproj.AssemblyReference.cache
+D:\SisCarloTete2\BLL\obj\Release\BLL.csproj.CoreCompileInputs.cache
+D:\SisCarloTete2\BLL\obj\Release\BLL.csproj.Up2Date
+D:\SisCarloTete2\BLL\obj\Release\BLL.dll
+D:\SisCarloTete2\BLL\obj\Release\BLL.pdb

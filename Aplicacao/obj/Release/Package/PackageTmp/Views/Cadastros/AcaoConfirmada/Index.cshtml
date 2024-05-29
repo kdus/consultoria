@@ -1,0 +1,332 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/Sistema/acaoconfirmada.js"></script>
+<script src="~/Scripts/jquery.mask.js"></script>
+
+<section class="content-header">
+    <h1>
+        Processo/Ação - Confirmadas
+    </h1>
+
+</section>
+
+
+
+
+<section class="content">
+
+
+
+    <div class="row">
+
+
+
+        <!-- left column -->
+        <div class="col-md-12">
+
+
+
+            <!-- general form elements -->
+            <div class="box box-primary">
+
+
+
+                <form role="form" id="frmAcaoConfirmada">
+
+
+                    <div class="box-body">
+
+                        <button type="button" class="btn btn-pinterest" onclick="novo(); return false;">Novo</button>
+                        <button type="button" class="btn btn-primary" onclick="gravar(); return false;">Gravar</button>
+                        <button type="button" class="btn btn-warning" onclick="excluir(); return false;">Excluir</button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-pesquisa">Pesquisar</button>
+                        <button type="button" class="btn bg-purple" data-toggle="modal" data-target="#modal-email">Enviar E-mail</button>
+                        <button type="button" class="btn bg-navy" data-toggle="modal" data-target="#modal-encerrar">Encerrar Confirmação</button>
+                        
+                        <!-- /.modal pesquisa -->
+                        <div class="modal fade" id="modal-pesquisa">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Parâmetros da Pesquisa</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label for="exampleInputEmail1">Assessoria</label>
+                                                        <input type="text" class="form-control" id="BuscaAssessoria" name="BuscaAssessoria" placeholder="Nome">
+                                                    </div>
+                                                </div>
+                                                <div class="row">                                             
+
+                                                    <div class="col-md-4">
+
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="BuscaConfirmada" name="BuscaConfirmada"> Confirmada
+                                                            </label>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-4">
+
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="BuscaNaoConfirmada" name="BuscaNaoConfirmada"> Não Confirmada
+                                                            </label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                                        <button type="submit" class="btn btn-primary collapsed" data-dismiss="modal" data-toggle="collapse" onclick="buscar(); return false;"> Buscar </button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                       
+                        <!-- /.modal email-->
+                        <div class="modal fade" id="modal-email">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Enviar e-mail</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Para</label>
+                                                            <input type="text" class="form-control" id="EmailPara" name="EmailPara" placeholder="Para">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Assunto</label>
+                                                            <input type="text" class="form-control" id="EmailAssunto" name="EmailAssunto" placeholder="Assunto" value="Relação de Processos a confirmar">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row" id="">
+                                           
+                                            <div id="divResultadoBusca" style="display:none">
+                                                <center style='width:100%; background-color:#EEEEEE'>
+                                                    <table align='center' cellspacing='0' cellpadding='0' border='0' width='650' style='border-spacing:0!important; border-collapse:collapse!important; table-layout:fixed!important; margin:0 auto'>
+                                                        <tbody>
+                                                            <tr style=''>
+                                                                <td align='center' style='padding:30px 0'>
+                                                                    <img title='Eaj Advogados' width="200" alt='Eaj Advogados' border='0' style='height: auto; color: rgb(67, 171, 224);height:auto; font-family:sans-serif; font-size:15px; line-height:15px; color:#425b9c' src='https://eajadvogados.com.br/wp-content/uploads/2019/09/logo-EAJ.png'></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style=''>
+                                                                <td bgcolor='#ffffff' style='border-color:#d9dde4; border-style:solid; border-width:1px 1px 2px'>
+                                                                    <table cellspacing='0' cellpadding='0' border='0' width='100%' style='border-spacing:0!important; border-collapse:collapse!important; table-layout:fixed!important; margin:0 auto'>
+
+                                                                        <tr style=''>
+                                                                            <td align='center' style='font-family:sans-serif; font-size:15px; line-height:20px; color:#1e1e1e; padding:30px'>
+                                                                                <h2><font color='#001C54'>Olá.</font></h2>
+                                                                                <p>Estamos enviando a relação de clientes/processos a serem confirmados.</p>
+                                                                                <br /><br />
+                                                                                   #AquiAqui
+                                                                                <br>                                                                                                                                                    
+                                                                               Por favor, acesse o sistema http://www.eaj.systems-on.com.br para confirmar sua relação.
+                                                                                <br><br>
+
+                                                                               
+                                                                                    Atenciosamente,<br>
+                                                                                    <br>                                                                                   
+                                                                               
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+
+                                                                    <table cellspacing='0' cellpadding='0' border='0' width='100%' style='border-spacing:0!important; border-collapse:collapse!important; table-layout:fixed!important; margin:0 auto'>
+                                                                        <tr bgcolor='#dddddd'>
+                                                                            <td align='center' style='font-family:sans-serif; font-size:15px; line-height:20px; color:#1e1e1e; padding:30px'>
+                                                                              
+                                                                                <br>
+                                                                                <center>
+                                                                                    <p style='font-size:13px;'><b>Atendimento</b>
+                                                                                    Em caso de dúvidas, fique à vontade para nos contatar.<br>
+                                                                                    De Segunda a Sexta - das 7h30 às 17h15
+                                                                                    </p>
+                                                                                </center>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                    </table>
+                                                    <table align='center' cellspacing='0' cellpadding='0' border='0' width='600' style='border-spacing:0!important; border-collapse:collapse!important; table-layout:fixed!important; margin:0 auto'>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align='center' style='font-family:sans-serif; font-size:12px; line-height:15px; color:#848e95; padding:20px'>
+                                                                    Enviado por <font color='#001C54'>Eaj Advogados</font><br>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </center>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fechar</button>
+                                        <button type="submit" class="btn btn-success collapsed" data-dismiss="modal" data-toggle="collapse" onclick="EnviarEmailRelacao(EmailPara.value, EmailAssunto.value, '#divResultadoBusca'); return false;"> Enviar </button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+                        <!-- /.modal encerrar-->
+                        <div class="modal fade" id="modal-encerrar">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title">Encerrar Confirmação</h4>
+                                    </div>
+                                    <div class="modal-body">                 
+
+                                        <label for="exampleInputEmail1">Tem certeza que deseja encerrar?</label>
+
+                                        
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Não</button>
+                                        <button type="submit" class="btn btn-success collapsed" data-dismiss="modal" data-toggle="collapse" onclick="EncerrarConfirmacao(); return false;"> Sim </button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+                        <br /><br />
+
+                        <div id="divMensagemErro" style="display:none" class="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                            <h4><i class="icon fa fa-check"></i> Aviso!</h4>
+
+                            <span id="msgErroSucesso"></span>
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-md-1">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Código</label>
+                                    <input type="text" class="form-control" id="Codigo" name="Codigo" disabled="disabled">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Assessoria</label>
+                                    <input type="text" class="form-control" id="AssessoriaNome" name="AssessoriaNome" placeholder="Nome">
+                                </div>
+                            </div>
+
+                        <div class="col-md-3">
+                                <label for="">Expira Em</label>
+                             
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="ExpiraEm" name="ExpiraEm" data-date-format="dd/mm/yyyy" autocomplete="off">
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-2">
+                                <label for="">&nbsp;</label>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="Encerrada"> Encerrada
+                                    </label>
+                                </div>
+
+                            </div>
+
+
+                        </div>                      
+
+
+
+
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="button" class="btn btn-primary" onclick="gravar(); return false;">Gravar</button>
+                    </div>
+                </form>
+
+
+
+            </div>
+            <!-- /.box -->
+
+        </div>
+
+
+    </div>
+    <!-- /.row -->
+
+
+    <div class="box collapse" id="grdAcaoProcesso">
+
+    </div>
+
+    <div class="box collapse" id="grdBusca">
+
+    </div>
+
+
+
+</section>

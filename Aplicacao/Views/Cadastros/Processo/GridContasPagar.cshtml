@@ -1,0 +1,82 @@
+﻿<div class="box-header with-border">
+    <h3 class="box-title">Resultado da Busca</h3>
+</div>
+<!-- /.box-header -->
+<div class="box-body table-responsive no-padding" id="divResultadoBusca">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th style="width: 10px"><input type="checkbox" name="SelecionarTodos" onclick="selecionarTodos();" /></th>
+                <th style="width: 10px">#</th>
+                <th>Favorecido</th>
+                <th>Descrição</th>
+                <th>Parcela</th>
+                <th>Vencimento</th>
+                <th>Valor</th>
+                <th>Recebido</th>
+                <th>Referência</th>
+                <th>Requerente</th>
+                <th>Pago</th>
+                <th>-</th>
+            </tr>
+
+            @if (Model != null && Model.Contas != null)
+            {
+                double vTotal = 0;
+                double vRecebido = 0;
+
+                int i = 0;
+                foreach (var item in Model.Contas)
+                {
+                    <tr class="cpointer">
+                        <td><input type="checkbox" name="Codigo_@i" value="@item.Codigo" /></td>
+                        <td class="cpointer"><a href="/Financeiro/ContasPagar/@item.Codigo">@item.Codigo</a></td>
+                        <td class="cpointer"><a href="/Financeiro/ContasPagar/@item.Codigo">@item.FavorecidoNome</a></td>
+                        <td class="cpointer"><a href="/Financeiro/ContasPagar/@item.Codigo">@item.Descricao</a></td>
+                        <td class="cpointer"><a href="/Financeiro/ContasPagar/@item.Codigo">@item.ParcelaX / @item.ParcelaY</a></td>
+                        <td class="cpointer" align="center"><a href="/Financeiro/ContasPagar/@item.Codigo">@(item.Vencimento == null ? "" : String.Format("{0:dd/MM/yyyy}", Convert.ToDateTime(item.Vencimento)))</a></td>
+                        <td class="cpointer" align="right"><a href="/Financeiro/ContasPagar/@item.Codigo">@string.Format("{0:n2}", Convert.ToDouble(item.Valor))</a></td> 
+                        <td class="cpointer" align="right"><a href="/Financeiro/ContasPagar/@item.Codigo">@string.Format("{0:n2}", Convert.ToDouble(item.ValorPago))</a></td> 
+                        <td class="cpointer" align="center"><a href="/Financeiro/ContasPagar/@item.Codigo">@(item.MesReferencia != null ? (item.MesReferencia.ToString().PadLeft(2, '0') + "/" + item.AnoReferencia) : "")</a></td>
+                        <td class="cpointer" ><a href="/Financeiro/ContasPagar/@item.Codigo">@item.RequerenteNome</a></td>
+                        @if (item.Pago == null || item.Pago.Equals("N"))
+                        {
+                            <td><a href="#"><span class="label label-danger">Não</span></a></td>
+                        }
+                        else if (item.Pago.Equals("S"))
+                        {
+                            <td><a href="#"><span class="label label-success">Sim</span></a></td>
+                        }
+                        else if (item.Pago.Equals("C"))
+                        {
+                            <td><a href="#"><span class="label label-info">Can</span></a></td>
+                        }
+                        else
+                        {
+                            <td></td>
+                        }
+
+                        <td><a href="http://www.eaj.systems-on.com.br/documentos/cp/@(item.Codigo).pdf" target="_blank"><i class="fa fa-fw fa-paperclip"></i></a></td>
+                    </tr>
+
+                    vTotal    += Convert.ToDouble(item.Valor);
+                    vRecebido += Convert.ToDouble(item.ValorPago);
+                    i++;
+                }
+
+                <tr>
+                    <td></td>
+                    <td>@i<input type="hidden" id="QtdeFiltrado" name="QtdeFiltrado" value="@i" /></td>
+                    <td><button type="button" class="btn btn-openid" onclick="baixaLote(); return false;">Baixar selecionados</button></td>
+                    <td></td>
+                    <td></td>
+                    <td align="right"><b>Total</b></td>
+                    <td align="right"><b>@string.Format("{0:n2}", Convert.ToDouble(vTotal))</b></td>
+                    <td align="right"><b>@string.Format("{0:n2}", Convert.ToDouble(vRecebido))</b></td>
+                    <td></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

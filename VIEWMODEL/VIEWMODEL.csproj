@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A602AAB2-0795-4DDA-A78B-AA147B669BF0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MODELS</RootNamespace>
+    <AssemblyName>VIEWMODEL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcaoConfirmadaListaViewModel.cs" />
+    <Compile Include="AcaoTipoViewModel.cs" />
+    <Compile Include="AcaoConfirmadaViewModel.cs" />
+    <Compile Include="CentroCustoViewModel.cs" />
+    <Compile Include="ContaBancariaExtratoViewModel.cs" />
+    <Compile Include="ContaBancariaExtratoListaViewModel.cs" />
+    <Compile Include="ContaBancariaSaldoViewModel.cs" />
+    <Compile Include="ContaBancariaSaldoListaViewModel.cs" />
+    <Compile Include="ContaContabilViewModel.cs" />
+    <Compile Include="ContasPagarDetalheViewModel.cs" />
+    <Compile Include="HomeViewModel.cs" />
+    <Compile Include="EmpresaViewModel.cs" />
+    <Compile Include="MenuViewModel.cs" />
+    <Compile Include="PedidoVendaViewModel.cs" />
+    <Compile Include="PessoaUsuarioViewModel.cs" />
+    <Compile Include="ResumoViewModel.cs" />
+    <Compile Include="ResumoListaViewModel.cs" />
+    <Compile Include="EmailViewModel.cs" />
+    <Compile Include="ParametroViewModel.cs" />
+    <Compile Include="TelaViewModel.cs" />
+    <Compile Include="TipoCobrancaRecebimentoViewModel.cs" />
+    <Compile Include="UsuarioPermissaoViewModel.cs" />
+    <Compile Include="ContaBancariaListaViewModel.cs" />
+    <Compile Include="AcaoListaViewModel.cs" />
+    <Compile Include="TransferenciaViewModel.cs" />
+    <Compile Include="ContasReceberListaViewModel.cs" />
+    <Compile Include="ContasReceberViewModel.cs" />
+    <Compile Include="OrigemCadastroViewModel.cs" />
+    <Compile Include="FormaPagamentoRecebimentoViewModel.cs" />
+    <Compile Include="ContaBanacariaViewModel.cs" />
+    <Compile Include="AcaoViewModel.cs" />
+    <Compile Include="ContasPagarListaViewModel.cs" />
+    <Compile Include="ContasPagarViewModel.cs" />
+    <Compile Include="DmlViewModel.cs" />
+    <Compile Include="AnoViewModel.cs" />
+    <Compile Include="MesViewModel.cs" />
+    <Compile Include="PessoaViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UploadFilesResult.cs" />
+    <Compile Include="UsuarioViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
