@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SisCarloTete2\\",
+  "WorkspaceRootPath": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|d:\\siscarlotete2\\aplicacao\\scripts\\sistema\\contas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|c:\\users\\carlos.elmiranda\\source\\repos\\consultoria\\aplicacao\\scripts\\sistema\\contas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|solutionrelative:aplicacao\\scripts\\sistema\\contas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|D:\\SisCarloTete2\\aplicacao\\scripts\\sistema\\pessoa.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\aplicacao\\scripts\\sistema\\pessoa.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|solutionrelative:aplicacao\\scripts\\sistema\\pessoa.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|D:\\SisCarloTete2\\aplicacao\\views\\cadastros\\pessoa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\aplicacao\\views\\cadastros\\pessoa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|solutionrelative:aplicacao\\views\\cadastros\\pessoa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|D:\\SisCarloTete2\\aplicacao\\views\\home\\contas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\aplicacao\\views\\home\\contas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|solutionrelative:aplicacao\\views\\home\\contas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|D:\\SisCarloTete2\\aplicacao\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\aplicacao\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|solutionrelative:aplicacao\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A602AAB2-0795-4DDA-A78B-AA147B669BF0}|VIEWMODEL\\VIEWMODEL.csproj|D:\\SisCarloTete2\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A602AAB2-0795-4DDA-A78B-AA147B669BF0}|VIEWMODEL\\VIEWMODEL.csproj|C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A602AAB2-0795-4DDA-A78B-AA147B669BF0}|VIEWMODEL\\VIEWMODEL.csproj|solutionrelative:viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -60,9 +60,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "pessoa.js",
-              "DocumentMoniker": "D:\\SisCarloTete2\\Aplicacao\\Scripts\\Sistema\\pessoa.js",
+              "DocumentMoniker": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Scripts\\Sistema\\pessoa.js",
               "RelativeDocumentMoniker": "Aplicacao\\Scripts\\Sistema\\pessoa.js",
-              "ToolTip": "D:\\SisCarloTete2\\Aplicacao\\Scripts\\Sistema\\pessoa.js",
+              "ToolTip": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Scripts\\Sistema\\pessoa.js",
               "RelativeToolTip": "Aplicacao\\Scripts\\Sistema\\pessoa.js",
               "ViewState": "AQIAANEAAAAAAAAAAAAAABIBAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
@@ -72,9 +72,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\SisCarloTete2\\Aplicacao\\Views\\Cadastros\\Pessoa\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Views\\Cadastros\\Pessoa\\Index.cshtml",
               "RelativeDocumentMoniker": "Aplicacao\\Views\\Cadastros\\Pessoa\\Index.cshtml",
-              "ToolTip": "D:\\SisCarloTete2\\Aplicacao\\Views\\Cadastros\\Pessoa\\Index.cshtml",
+              "ToolTip": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Views\\Cadastros\\Pessoa\\Index.cshtml",
               "RelativeToolTip": "Aplicacao\\Views\\Cadastros\\Pessoa\\Index.cshtml",
               "ViewState": "AQIAAEgAAAAAAAAAAAAAAAIAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -84,11 +84,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Contas.js",
-              "DocumentMoniker": "D:\\SisCarloTete2\\Aplicacao\\Scripts\\Sistema\\Contas.js",
+              "DocumentMoniker": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Scripts\\Sistema\\Contas.js",
               "RelativeDocumentMoniker": "Aplicacao\\Scripts\\Sistema\\Contas.js",
-              "ToolTip": "D:\\SisCarloTete2\\Aplicacao\\Scripts\\Sistema\\Contas.js",
+              "ToolTip": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Scripts\\Sistema\\Contas.js",
               "RelativeToolTip": "Aplicacao\\Scripts\\Sistema\\Contas.js",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAAKAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-05-22T12:29:49.049Z",
               "EditorCaption": ""
@@ -97,9 +97,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Contas.cshtml",
-              "DocumentMoniker": "D:\\SisCarloTete2\\Aplicacao\\Views\\Home\\Contas.cshtml",
+              "DocumentMoniker": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Views\\Home\\Contas.cshtml",
               "RelativeDocumentMoniker": "Aplicacao\\Views\\Home\\Contas.cshtml",
-              "ToolTip": "D:\\SisCarloTete2\\Aplicacao\\Views\\Home\\Contas.cshtml",
+              "ToolTip": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Views\\Home\\Contas.cshtml",
               "RelativeToolTip": "Aplicacao\\Views\\Home\\Contas.cshtml",
               "ViewState": "AQIAAIEAAAAAAAAAAAAAAJoAAABpAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -109,9 +109,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\SisCarloTete2\\Aplicacao\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Aplicacao\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\SisCarloTete2\\Aplicacao\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Aplicacao\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACcAAACIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -121,9 +121,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "D:\\SisCarloTete2\\VIEWMODEL\\HomeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\VIEWMODEL\\HomeViewModel.cs",
               "RelativeDocumentMoniker": "VIEWMODEL\\HomeViewModel.cs",
-              "ToolTip": "D:\\SisCarloTete2\\VIEWMODEL\\HomeViewModel.cs",
+              "ToolTip": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\VIEWMODEL\\HomeViewModel.cs",
               "RelativeToolTip": "VIEWMODEL\\HomeViewModel.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAwwBgAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

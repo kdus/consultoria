@@ -20,3 +20,9 @@ D:\SisCarloTete2\VIEWMODEL\obj\Debug\VIEWMODEL.csproj.AssemblyReference.cache
 D:\SisCarloTete2\VIEWMODEL\obj\Debug\VIEWMODEL.csproj.CoreCompileInputs.cache
 D:\SisCarloTete2\VIEWMODEL\obj\Debug\VIEWMODEL.dll
 D:\SisCarloTete2\VIEWMODEL\obj\Debug\VIEWMODEL.pdb
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\VIEWMODEL\bin\Debug\VIEWMODEL.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\VIEWMODEL\bin\Debug\VIEWMODEL.pdb
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\VIEWMODEL\obj\Debug\VIEWMODEL.csproj.AssemblyReference.cache
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\VIEWMODEL\obj\Debug\VIEWMODEL.csproj.CoreCompileInputs.cache
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\VIEWMODEL\obj\Debug\VIEWMODEL.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\VIEWMODEL\obj\Debug\VIEWMODEL.pdb

@@ -50,3 +50,17 @@ D:\SisCarloTete2\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 D:\SisCarloTete2\DAO\obj\Debug\DAO.csproj.Up2Date
 D:\SisCarloTete2\DAO\obj\Debug\DAO.dll
 D:\SisCarloTete2\DAO\obj\Debug\DAO.pdb
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\bin\Debug\DAO.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\bin\Debug\DAO.pdb
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\bin\Debug\BEAN.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\bin\Debug\Dapper.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\bin\Debug\MySql.Data.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\bin\Debug\VIEWMODEL.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\bin\Debug\BEAN.pdb
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\bin\Debug\VIEWMODEL.pdb
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\bin\Debug\Dapper.xml
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\obj\Debug\DAO.csproj.Up2Date
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\obj\Debug\DAO.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\DAO\obj\Debug\DAO.pdb

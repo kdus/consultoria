@@ -19,3 +19,9 @@ D:\SisCarloTete2\BEAN\obj\Debug\BEAN.csproj.AssemblyReference.cache
 D:\SisCarloTete2\BEAN\obj\Debug\BEAN.csproj.CoreCompileInputs.cache
 D:\SisCarloTete2\BEAN\obj\Debug\BEAN.dll
 D:\SisCarloTete2\BEAN\obj\Debug\BEAN.pdb
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\bin\Debug\BEAN.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\bin\Debug\BEAN.pdb
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\obj\Debug\BEAN.csproj.AssemblyReference.cache
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\obj\Debug\BEAN.csproj.CoreCompileInputs.cache
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\obj\Debug\BEAN.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\obj\Debug\BEAN.pdb
