@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|c:\\users\\carlos.elmiranda\\source\\repos\\consultoria\\aplicacao\\scripts\\sistema\\contas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|c:\\users\\carlos.elmiranda\\source\\repos\\consultoria\\aplicacao\\views\\home\\contas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|solutionrelative:aplicacao\\views\\home\\contas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\aplicacao\\scripts\\sistema\\contas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|solutionrelative:aplicacao\\scripts\\sistema\\contas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\aplicacao\\views\\cadastros\\pessoa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|solutionrelative:aplicacao\\views\\cadastros\\pessoa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\aplicacao\\views\\home\\contas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|solutionrelative:aplicacao\\views\\home\\contas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1F357EF-D4E0-4B67-BC00-5DD52C5B2084}|Aplicacao\\Aplicacao.csproj|C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\aplicacao\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "pessoa.js",
               "DocumentMoniker": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Scripts\\Sistema\\pessoa.js",
               "RelativeDocumentMoniker": "Aplicacao\\Scripts\\Sistema\\pessoa.js",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Views\\Cadastros\\Pessoa\\Index.cshtml",
               "RelativeDocumentMoniker": "Aplicacao\\Views\\Cadastros\\Pessoa\\Index.cshtml",
@@ -82,28 +82,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Contas.js",
               "DocumentMoniker": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Scripts\\Sistema\\Contas.js",
               "RelativeDocumentMoniker": "Aplicacao\\Scripts\\Sistema\\Contas.js",
               "ToolTip": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Scripts\\Sistema\\Contas.js",
               "RelativeToolTip": "Aplicacao\\Scripts\\Sistema\\Contas.js",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACYAAAAAAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAuwC0AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-22T12:29:49.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T12:29:49.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Contas.cshtml",
               "DocumentMoniker": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Views\\Home\\Contas.cshtml",
               "RelativeDocumentMoniker": "Aplicacao\\Views\\Home\\Contas.cshtml",
               "ToolTip": "C:\\Users\\carlos.elmiranda\\source\\repos\\consultoria\\Aplicacao\\Views\\Home\\Contas.cshtml",
               "RelativeToolTip": "Aplicacao\\Views\\Home\\Contas.cshtml",
-              "ViewState": "AQIAAIEAAAAAAAAAAAAAAJoAAABpAAAA",
+              "ViewState": "AQIAAIMAAAAAAAAAAAAAAK4AAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-08T19:06:26.16Z"
+              "WhenOpened": "2024-05-08T19:06:26.16Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
