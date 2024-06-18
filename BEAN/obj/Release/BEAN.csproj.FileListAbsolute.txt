@@ -20,3 +20,9 @@ D:\SisCarloTete2\BEAN\obj\Release\BEAN.csproj.AssemblyReference.cache
 D:\SisCarloTete2\BEAN\obj\Release\BEAN.csproj.CoreCompileInputs.cache
 D:\SisCarloTete2\BEAN\obj\Release\BEAN.dll
 D:\SisCarloTete2\BEAN\obj\Release\BEAN.pdb
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\bin\Release\BEAN.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\bin\Release\BEAN.pdb
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\obj\Release\BEAN.csproj.AssemblyReference.cache
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\obj\Release\BEAN.csproj.CoreCompileInputs.cache
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\obj\Release\BEAN.dll
+C:\Users\carlos.elmiranda\Source\Repos\consultoria\BEAN\obj\Release\BEAN.pdb

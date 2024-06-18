@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Index";
 }
 
 
@@ -19,15 +20,12 @@
         Dashboard
         <small>Painel Contas</small>
     </h1>
-    <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
-    </ol>
+    
 </section>
 
 <section class="content">
 
-
+    <!-- Lista de Busca -->
     <div class="row">
         <div class="col-md-12">
 
@@ -37,7 +35,7 @@
                     <div class="col-md-6    ">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Empresa/Filial</label>
-                            <select class="form-control" style="width: 100%;" name="MatrizFilial" id="MatrizFilial" onchange="detalhar(); return false;">
+                            <select class="form-control" name="MatrizFilial" id="MatrizFilial" onchange="detalhar(); return false;">
                                 <option value="0" selected>Empresa/Filial</option>
                                 @foreach (var item in Model.Clientes)
                                 {
@@ -49,13 +47,10 @@
                     </div>
 
 
-
-
-
                     <div class="col-lg-3">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Ano</label>
-                            <select class="form-control" style="width: 100%;" name="BuscaAno" id="BuscaAno" onchange="detalhar(); return false;">
+                            <select class="form-control" name="BuscaAno" id="BuscaAno" onchange="detalhar(); return false;">
                                 <option value="0" selected>Ano...</option>
                                 @foreach (var item in Model.Ano)
                                 {
@@ -69,7 +64,7 @@
                     <div class="col-lg-3">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Mês</label>
-                            <select class="form-control" style="width: 100%;" name="BuscaMes" id="BuscaMes" onchange="detalhar(); return false;">
+                            <select class="form-control" name="BuscaMes" id="BuscaMes" onchange="detalhar(); return false;">
                                 <option value="0" selected>Mês...</option>
                                 @foreach (var item in Model.Meses)
                                 {
@@ -84,12 +79,210 @@
             </form>
 
 
-
-            <div id="gdrContas"></div>
-
         </div>
 
 
+
+    </div>
+
+    <!-- Indicadores -->
+    <div class="row">
+
+        <div class="col-lg-3 col-6">
+
+            <div class="bg-info">
+                <div class="inner">
+                    <h2 id="total-faturamento-peca"></h2>
+                    <h3 id="por-fat-peca"></h3>
+                    <p>Faturamento Peça</p>
+                </div>
+                @*<div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>*@
+                @*<a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>*@
+            </div>
+
+        </div>
+        <!-- /.info-box -->
+        <div class="col-lg-3 col-6">
+
+            <div class="bg-success">
+                <div class="inner">
+                    <h2 id="Totalfaturamento_maoobra"><sup style="font-size: 20px"></sup></h2>
+                    <h3 id="Por-Fat-Servico"></h3>
+                    <p>Faturamento Serviço</p>
+
+
+                </div>
+                @*<div class="icon">
+                        <i class="ion ion-stats-bars"></i>
+                    </div>*@
+                @*<a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>*@
+            </div>
+
+            <!-- /.info-box -->
+        </div>
+
+        <div class="col-lg-3 col-6">
+
+            <div class="bg-warning">
+                <div class="inner">
+                    <h2 id="Totalqtd_veiculo"></h2>
+                    <h3 id="Por-Indicador"></h3>
+                    <p>QTD Atendimento</p>
+                </div>
+                @*<div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>*@
+                @*<a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>*@
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+
+            <div class="bg-danger">
+                <div class="inner">
+                    <h3 id="Totalticketmedio"></h3>
+                    <h3 id="Total-ticketmedio"></h3>
+                    <p>Ticket Médio</p>
+                </div>
+                @*<div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>*@
+                @*<a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>*@
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Dashboards -->
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3  id="TOTALFATURAMENTO" class="box-title"> </h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction:column; align-items: center; justify-content: center; padding-top:10px;">
+
+
+                    <div>
+                        <input type="text" class="knob" id="PorFat" data-skin="tron" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" data-width="250" data-height="250" readonly>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 20px">
+
+                        <div style=" display: flex; gap: 10px">
+                            <h3 style="background-color: #007bff; color: #007bff; ">TE</h3>
+                            <h3>Normal</h3>
+                        </div>
+
+                        <div style=" display: flex; gap: 10px">
+                            <h3 style=" background-color: #ffc107; color:#ffc107;">TE</h3>
+                            <h3>Bom</h3>
+                        </div>
+
+                        <div style=" display: flex; gap: 10px">
+                            <h3 style="background-color: #28a745; color: #28a745; ">TE</h3>
+                            <h3>Excelente</h3>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+        <div class="col-md-6">
+
+            <!-- BAR CHART -->
+            <div class="box box-success">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Rentabilidade Marguem Bruta</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="box-body chart-responsive">
+                   
+                    <div class="chart" id="bar-chart" style="height: 300px;"></div>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col (RIGHT) -->
+    </div>
+
+    <!-- Indicadores pizza -->
+    <div class="row">
+        <div class="col-md-12">
+
+
+
+            <!--DONUT CHART-->
+            <div class="box box-danger">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Metas Comerciais</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="box-body chart-responsive">
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6 col-md-3 text-center">
+
+                                <input type="text" class="knob" id="PorFatPeca" data-width="150" data-height="150" data-fgColor="#007bff" data-readonly="true">
+                                <div id="total-faturamento-peca2" class="knob-label"></div>
+                            </div>
+
+                            <div class="col-6 col-md-3 text-center">
+                                <input type="text" class="knob" id="PorFatServico" data-width="150" data-height="150" data-fgColor="#28a745" data-readonly="true">
+                                <div id="Totalfaturamento_maoobra2" class="knob-label"><strong></strong></div>
+                            </div>
+
+                            <div class="col-6 col-md-3 text-center">
+                                <input type="text" class="knob" id="PorIndicador" data-width="150" data-height="150" data-fgColor="#ffc107" data-readonly="true">
+                                <div id="Totalqtd_veiculo2" class="knob-label"><strong></strong></div>
+                            </div>
+
+                            <div class="col-6 col-md-3 text-center">
+                                <input type="text" class="knob" id="Porticketmedio" data-width="150" data-height="150" data-fgColor="#dc3545" data-readonly="true">
+                                <div id="Totalticketmedio2" class="knob-label"><strong></strong></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
 </section>

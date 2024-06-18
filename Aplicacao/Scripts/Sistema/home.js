@@ -1,93 +1,56 @@
 ﻿$(document).ready(function () {
+    $("#PorFatPeca").knob({
 
-   
+    });
+    $("#PorFatServico").knob({
 
-    "use strict";
+    });
+    $("#PorIndicador").knob({
 
-    // AREA CHART
-    //var area = new Morris.Area({
-    //    element: 'revenue-chart',
-    //    resize: true,
-    //    data: [
-    //      { y: '2011 Q1', item1: 2666, item2: 2666 },
-    //      { y: '2011 Q2', item1: 2778, item2: 2294 },
-    //      { y: '2011 Q3', item1: 4912, item2: 1969 },
-    //      { y: '2011 Q4', item1: 3767, item2: 3597 },
-    //      { y: '2012 Q1', item1: 6810, item2: 1914 },
-    //      { y: '2012 Q2', item1: 5670, item2: 4293 },
-    //      { y: '2012 Q3', item1: 4820, item2: 3795 },
-    //      { y: '2012 Q4', item1: 15073, item2: 5967 },
-    //      { y: '2013 Q1', item1: 10687, item2: 4460 },
-    //      { y: '2013 Q2', item1: 8432, item2: 5713 }
-    //    ],
-    //    xkey: 'y',
-    //    ykeys: ['item1', 'item2'],
-    //    labels: ['Item 1', 'Item 2'],
-    //    lineColors: ['#a0d0e0', '#3c8dbc'],
-    //    hideHover: 'auto'
-    //});
+    });
+    $("#Porticketmedio").knob({
 
-    // LINE CHART
-    //var line = new Morris.Line({
-    //    element: 'line-chart',
-    //    resize: true,
-    //    data: [
-    //      { y: '2011 Q1', item1: 2666 },
-    //      { y: '2011 Q2', item1: 2778 },
-    //      { y: '2011 Q3', item1: 4912 },
-    //      { y: '2011 Q4', item1: 3767 },
-    //      { y: '2012 Q1', item1: 6810 },
-    //      { y: '2012 Q2', item1: 5670 },
-    //      { y: '2012 Q3', item1: 4820 },
-    //      { y: '2012 Q4', item1: 15073 },
-    //      { y: '2013 Q1', item1: 10687 },
-    //      { y: '2013 Q2', item1: 8432 }
-    //    ],
-    //    xkey: 'y',
-    //    ykeys: ['item1'],
-    //    labels: ['Item 1'],
-    //    lineColors: ['#3c8dbc'],
-    //    hideHover: 'auto'
-    //});
-
-    //DONUT CHART
+    });
 
   
-    var donut = new Morris.Donut({
-       
-              
-        element: 'sales-chart',
-        resize: true,
-        colors: ["#3c8dbc", "#f56954", "#00a65a", "#ffa500"],
-        data: [
-            { label: "Faturamento Peças", value: 10 },
-            { label: "Faturamento Serviços", value: 20 },
-            { label: "QTD Atendimentos", value: 30 },
-            { label: "Ticket Médio", value: 40 }
-          
+    
+    $("#PorFat").knob({
 
-        ],
-        hideHover: 'auto'
+        fgColor: "#000000"
+
     });
-    //BAR CHART
+
+  
+
+    
+    
+
+    //var data = [
+    //    { y: 'Receita', a: 100 },
+    //    { y: 'Despesas', a: 75 }
+    //];
+
+    // Criando o gráfico
     var bar = new Morris.Bar({
         element: 'bar-chart',
         resize: true,
         data: [
-          { y: 'Janeiro', a: 100 },
-          { y: 'Fevereiro', a: 75 },
-          { y: 'Março', a: 50  },
-          { y: 'Abril', a: 75  },
-          { y: 'Maio', a: 50  },
-          { y: 'Junho', a: 75  }
-       
+            { y: 'Receita', a: 100 },
+            { y: 'Despesas', a: 75 }
         ],
-        barColors: ['#00a65a', '#f56954'],
         xkey: 'y',
         ykeys: ['a'],
         labels: ['%'],
+        barColors: function (row, series, type) {
+            if (row.label === 'Receita') return '#00a65a';
+            else if (row.label === 'Despesas') return '#d3d3d3';
+        },
         hideHover: 'auto'
     });
+
+ 
+  
+
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -112,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
             optionElement.value = value;
             optionElement.text = value;
             optionElement.selected = true;
-            selectElement.appendChild(optionElement);o
+            selectElement.appendChild(optionElement);
         }
 
 
@@ -132,25 +95,26 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+function Cores(value) {
+    var valor = value
+    var color;
 
-//function detalhar() {
+    if (valor < 0) {
+        color = "#007bff"; // Azul
+        $("#PorFat").val(0);
 
-//    var frm = $('#frmHome').serializeObject();
-//    var acao = JSON.stringify({ pModel: frm });
-    
+    } else if (valor < 20) {
+        color = "#007bff"; // Azul
 
-//    ChamarControler('/Home/Index', 'POST', acao, function (data) {
-//        if (data.status == 200)
-//        {
-            
-//        }
-//        else
-//        {
-           
-//        }
-//    });
-//}
+    } else if (valor < 40) {
+        color = "#ffc107"; // Amarelo
+    } else {
+        color = "#28a745"; // Green for values 66 - 100
+    }
+    return color;
 
+
+}
 
 function detalhar()
 {
@@ -163,18 +127,43 @@ function detalhar()
 
 
         ChamarControler('/Home/Buscar', 'POST', acao, function (data) {
+        
             if (data.status == 200) {
-                $('#gdrContas').html(data.responseText);
-                $('#gdrContas').show();
+
+                $("#total-faturamento-peca").text(data.responseJSON.Totalfaturamento_peca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+                $("#total-faturamento-peca2").text("Faturamento Peça " + data.responseJSON.Totalfaturamento_peca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+                $("#por-fat-peca").text(data.responseJSON.PorFatPeca.toFixed(2)+ "%");
+                $("#PorFatPeca").val(data.responseJSON.PorFatPeca.toFixed(2)).trigger('change');
+
+                $("#Totalfaturamento_maoobra").text(data.responseJSON.Totalfaturamento_maoobra.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+                $("#Totalfaturamento_maoobra2").text("Faturamento Serviço " + data.responseJSON.Totalfaturamento_maoobra.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+                $("#Por-Fat-Servico").text(data.responseJSON.PorFatServico.toFixed(2) + "%");
+                $("#PorFatServico").val(data.responseJSON.PorFatServico.toFixed(2)).trigger('change');
+
+                $("#Totalqtd_veiculo").text(data.responseJSON.Totalqtd_veiculo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+                $("#Totalqtd_veiculo2").text("QTD Atendimento " + data.responseJSON.Totalqtd_veiculo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+                $("#Por-Indicador").text(data.responseJSON.PorIndicador.toFixed(2) + "%");
+                $("#PorIndicador").val(data.responseJSON.PorIndicador.toFixed(2)).trigger('change');
+
+                $("#Totalticketmedio").text(data.responseJSON.Totalticketmedio.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+                $("#Totalticketmedio2").text("Ticket Médio " + data.responseJSON.Totalticketmedio.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+                $("#Total-ticketmedio").text(data.responseJSON.Porticketmedio.toFixed(2) + "%");
+                $("#Porticketmedio").val(data.responseJSON.Porticketmedio.toFixed(2)).trigger('change');
+
+                $("#TOTALFATURAMENTO").text("Total Faturamento " + data.responseJSON.TOTALFATURAMENTO.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+                $("#PorFat").val(data.responseJSON.PorFat.toFixed(2)).trigger('change').trigger('configure', { 'fgColor': Cores(data.responseJSON.PorFat) });
                 
+              
             }
             else
             {
-                $('#gdrContas').hide();
+              
                 mostraDialogo('<strong>Erro</strong><br>Erro ao buscar', "error", 3500);
             }
         });
     }
+
+    
 }
 
 

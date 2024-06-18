@@ -33,7 +33,7 @@ namespace Aplicacao.Controllers
         }
 
         [HttpPost]
-        public PartialViewResult Buscar(HomeViewModel pModel)
+        public JsonResult Buscar(HomeViewModel pModel)
         {
             HomeViewModel model = new HomeViewModel();
             
@@ -42,8 +42,8 @@ namespace Aplicacao.Controllers
 
             PopulaCombos(model);
 
-            return PartialView("~/Views/Home/Contas.cshtml", model);            
-        }
+			return Json(model);
+		}
 
         private void PopulaCombos(HomeViewModel model)
         {

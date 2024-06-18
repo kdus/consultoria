@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-
+    
     $("#PorFatPeca").knob({
 
     });
@@ -27,10 +27,10 @@
             color = "#007bff"; // Azul
             $("#PorFat").val(0);
 
-        } else if (valor < 10) {
+        } else if (valor < 20) {
             color = "#007bff"; // Azul
             
-        } else if (valor < 66) {
+        } else if (valor < 40) {
             color = "#ffc107"; // Amarelo                    
         } else {
             color = "#28a745"; // Green for values 66 - 100
@@ -40,14 +40,34 @@
 
     }
 
+    var bar = new Morris.Bar({
+        element: 'bar-chart2',
+        resize: true,
+        data: [
+            { y: 'Total', a: 100 },
+            { y: 'Despesas', a: 75 }
+          
+
+        ],
+        barColors: ['#00a65a', '#f56954'],
+        xkey: 'y',
+        ykeys: ['a'],
+        labels: ['%'],
+        hideHover: 'auto'
     });
 
 
-    //$("#PorFat").knob({
 
-    //    fgColor: faturamento() // Define a cor verde
 
-    //});
+
+   
+
+});
+
+
+// Script para criar o gráfico de barras
+
+
 
     // AREA CHART
     //var area = new Morris.Area({
@@ -101,7 +121,7 @@
     //var Totalfaturamento_maoobra = parseFloat($('#Totalfaturamento_maoobra').val()) || 0;
     //var Totalqtd_veiculo = parseFloat($('#Totalqtd_veiculo').val()) || 0;
     //var Totalticketmedio = parseFloat($('#Totalticketmedio').val()) || 0;
-     
+
     //var donut = new Morris.Donut({
 
 
@@ -118,23 +138,5 @@
     //    ],
     //    hideHover: 'auto'
     //});
-    //BAR CHART
-    //var bar = new Morris.Bar({
-    //    element: 'bar-chart',
-    //    resize: true,
-    //    data: [
-    //        { y: 'Janeiro', a: 100 },
-    //        { y: 'Fevereiro', a: 75 },
-    //        { y: 'Março', a: 50 },
-    //        { y: 'Abril', a: 75 },
-    //        { y: 'Maio', a: 50 },
-    //        { y: 'Junho', a: 75 }
 
-    //    ],
-    //    barColors: ['#00a65a', '#f56954'],
-    //    xkey: 'y',
-    //    ykeys: ['a'],
-    //    labels: ['%'],
-    //    hideHover: 'auto'
-    //});
 
